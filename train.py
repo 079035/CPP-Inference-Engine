@@ -5,6 +5,7 @@ import torchvision
 import torchvision.transforms as transforms
 import onnx
 
+
 class MNISTNet(nn.Module):
     def __init__(self):
         super(MNISTNet, self).__init__()
@@ -45,6 +46,7 @@ def train_mnist_model():
     epochs = 10
     for epoch in range(epochs):
         model.train()
+        running_loss = 0.0
         for i, (images, labels) in enumerate(train_loader):
             images, labels = images.to(device), labels.to(device)
             optimizer.zero_grad()
@@ -73,7 +75,6 @@ def train_mnist_model():
     print("Model exported to mnist_net.onnx")
 
 
-
 if __name__ == '__main__':
     train_mnist_model()
-    
+
