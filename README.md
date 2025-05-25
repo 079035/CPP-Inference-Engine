@@ -1,7 +1,7 @@
 # 🧠 MNIST Inference Engine (C++)
 
 A minimal, from-scratch C++ inference engine for running ONNX models—demonstrated on the classic MNIST digit recognition task.
-Inspired by [Build Your Own Inference Engine](https://michalpitr.substack.com/p/build-your-own-inference-engine-from).
+Inspired by [Build Your Own Inference Engine](https://michalpitr.substack.com/p/build-your-own-inference-engine-from) and [vLLM](https://github.com/vllm-project/vllm).
 
 ---
 
