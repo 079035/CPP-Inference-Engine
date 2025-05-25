@@ -37,6 +37,16 @@ int main(int argc, char** argv) {
     try {
         // Load ONNX model
         auto model = ONNXModelLoader::load(model_path);
+        std::cout << "Model input(s): ";
+        for (const auto& input : model.graph().input()) {
+            std::cout << input.name() << " shape: ";
+            for (const auto& d : input.type().tensor_type().shape().dim()) {
+                std::cout << d.dim_value() << " ";
+            }
+            std::cout << std::endl;
+        }
+
+        std::cout << std::endl;
         InferenceEngine engine(model);
 
         // Shape depends on model — example assumes [1, 1, 28, 28] (e.g., MNIST)
@@ -44,12 +54,23 @@ int main(int argc, char** argv) {
         Tensor<float> input_tensor = loadUByteImage(image_path, input_shape);
 
         // Input name (adjust based on your ONNX model's input)
-        std::string input_name = "input";  // Use actual model input name
+        std::string input_name = "onnx::Flatten_0";
 
         auto output = engine.infer({{input_name, input_tensor}});
+        
+        std::cout << "Output shape: ";
+        for(auto itr:output.shape){
+            std::cout << itr << " ";
+        }
+        std::cout << std::endl << "Output data: ";
+        for(auto itr:output.data){
+            std::cout << itr << " ";
+        }
+        std::cout << std::endl;
 
         // Output handling: e.g., argmax
         auto max_it = std::max_element(output.data.begin(), output.data.end());
+        std::cout << "Max element: " << *max_it << std::endl;
         int predicted_class = std::distance(output.data.begin(), max_it);
         std::cout << "Predicted class: " << predicted_class << std::endl;
     } catch (const std::exception& ex) {

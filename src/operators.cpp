@@ -5,7 +5,7 @@
 // Flatten
 Tensor<> op_flatten(const Tensor<> &in) {
   Tensor<> out = in;
-  out.flatten();
+  out.flatten_to_2d();
   return out;
 }
 
@@ -22,14 +22,14 @@ Tensor<> op_add(const Tensor<> &A, const Tensor<> &B) {
 Tensor<> op_relu(const Tensor<> &in) {
   Tensor<> out(in.shape);
   std::transform(in.data.begin(), in.data.end(), out.data.begin(),
-                 [](float x){ return x > 0 ? x : 0; });
+                  [](float x){ return x > 0 ? x : 0; });
   return out;
 }
 
 // Gemm: C = α·A·B + β·bias
 Tensor<> op_gemm(const Tensor<> &A, const Tensor<> &B,
-                 const Tensor<> &bias, bool transA, bool transB,
-                 float alpha, float beta) {
+                  const Tensor<> &bias, bool transA, bool transB,
+                  float alpha, float beta) {
   // assume A:[M×K], B:[K×N], bias:[N]
   int64_t M = transA ? A.shape[1] : A.shape[0];
   int64_t K = transA ? A.shape[0] : A.shape[1];

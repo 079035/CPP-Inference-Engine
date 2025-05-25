@@ -20,6 +20,17 @@ struct Tensor {
     shape = { static_cast<int64_t>(data.size()) };
   }
 
+  void flatten_to_2d() {
+    // Flatten all dimensions except the first (batch)
+    assert(shape.size() >= 2);
+    int64_t batch = shape[0];
+    int64_t rest = 1;
+    for (size_t i = 1; i < shape.size(); ++i)
+        rest *= shape[i];
+    shape = {batch, rest};
+    // data vector remains the same
+  }
+
   // access element (row-major)
   T& operator[](size_t idx) {
     assert(idx < data.size());

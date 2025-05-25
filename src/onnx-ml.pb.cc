@@ -138,6 +138,33 @@ struct StringStringEntryProtoDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StringStringEntryProtoDefaultTypeInternal _StringStringEntryProto_default_instance_;
 
+inline constexpr SimpleShardedDimProto::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        num_shards_{::int64_t{0}},
+        dim_{},
+        _oneof_case_{} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR SimpleShardedDimProto::SimpleShardedDimProto(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct SimpleShardedDimProtoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SimpleShardedDimProtoDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SimpleShardedDimProtoDefaultTypeInternal() {}
+  union {
+    SimpleShardedDimProto _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SimpleShardedDimProtoDefaultTypeInternal _SimpleShardedDimProto_default_instance_;
+
 inline constexpr OperatorSetIdProto::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
@@ -165,6 +192,61 @@ struct OperatorSetIdProtoDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 OperatorSetIdProtoDefaultTypeInternal _OperatorSetIdProto_default_instance_;
+
+inline constexpr IntIntListEntryProto::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        value_{},
+        key_{::int64_t{0}} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR IntIntListEntryProto::IntIntListEntryProto(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct IntIntListEntryProtoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR IntIntListEntryProtoDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~IntIntListEntryProtoDefaultTypeInternal() {}
+  union {
+    IntIntListEntryProto _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IntIntListEntryProtoDefaultTypeInternal _IntIntListEntryProto_default_instance_;
+
+inline constexpr DeviceConfigurationProto::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        device_{},
+        name_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        num_devices_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR DeviceConfigurationProto::DeviceConfigurationProto(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct DeviceConfigurationProtoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR DeviceConfigurationProtoDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~DeviceConfigurationProtoDefaultTypeInternal() {}
+  union {
+    DeviceConfigurationProto _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeviceConfigurationProtoDefaultTypeInternal _DeviceConfigurationProto_default_instance_;
 
 inline constexpr TensorShapeProto::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -267,6 +349,32 @@ struct TensorAnnotationDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TensorAnnotationDefaultTypeInternal _TensorAnnotation_default_instance_;
 
+inline constexpr ShardedDimProto::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        simple_sharding_{},
+        axis_{::int64_t{0}} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR ShardedDimProto::ShardedDimProto(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct ShardedDimProtoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ShardedDimProtoDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ShardedDimProtoDefaultTypeInternal() {}
+  union {
+    ShardedDimProto _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ShardedDimProtoDefaultTypeInternal _ShardedDimProto_default_instance_;
+
 inline constexpr TypeProto_Tensor::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
@@ -345,6 +453,36 @@ struct SparseTensorProtoDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SparseTensorProtoDefaultTypeInternal _SparseTensorProto_default_instance_;
+
+inline constexpr ShardingSpecProto::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        device_{},
+        index_to_device_group_map_{},
+        sharded_dim_{},
+        tensor_name_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+PROTOBUF_CONSTEXPR ShardingSpecProto::ShardingSpecProto(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct ShardingSpecProtoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ShardingSpecProtoDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ShardingSpecProtoDefaultTypeInternal() {}
+  union {
+    ShardingSpecProto _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ShardingSpecProtoDefaultTypeInternal _ShardingSpecProto_default_instance_;
 
 inline constexpr TypeProto::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -450,6 +588,35 @@ struct TypeProto_SequenceDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TypeProto_SequenceDefaultTypeInternal _TypeProto_Sequence_default_instance_;
+
+inline constexpr NodeDeviceConfigurationProto::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        sharding_spec_{},
+        configuration_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        pipeline_stage_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR NodeDeviceConfigurationProto::NodeDeviceConfigurationProto(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct NodeDeviceConfigurationProtoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR NodeDeviceConfigurationProtoDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~NodeDeviceConfigurationProtoDefaultTypeInternal() {}
+  union {
+    NodeDeviceConfigurationProto _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 NodeDeviceConfigurationProtoDefaultTypeInternal _NodeDeviceConfigurationProto_default_instance_;
 
 inline constexpr ValueInfoProto::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -578,6 +745,7 @@ inline constexpr NodeProto::Impl_::Impl_(
         output_{},
         attribute_{},
         metadata_props_{},
+        device_configurations_{},
         name_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
@@ -693,6 +861,7 @@ inline constexpr ModelProto::Impl_::Impl_(
         metadata_props_{},
         training_info_{},
         functions_{},
+        configuration_{},
         producer_name_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
@@ -841,12 +1010,12 @@ constexpr int AttributeProto::AttributeType_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) &&
         // (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 PROTOBUF_CONSTINIT const uint32_t TensorProto_DataType_internal_data_[] = {
-    1507328u, 0u, };
+    1572864u, 0u, };
 bool TensorProto_DataType_IsValid(int value) {
-  return 0 <= value && value <= 22;
+  return 0 <= value && value <= 23;
 }
 static ::google::protobuf::internal::ExplicitlyConstructed<std::string>
-    TensorProto_DataType_strings[23] = {};
+    TensorProto_DataType_strings[24] = {};
 
 static const char TensorProto_DataType_names[] = {
     "BFLOAT16"
@@ -856,6 +1025,7 @@ static const char TensorProto_DataType_names[] = {
     "DOUBLE"
     "FLOAT"
     "FLOAT16"
+    "FLOAT4E2M1"
     "FLOAT8E4M3FN"
     "FLOAT8E4M3FNUZ"
     "FLOAT8E5M2"
@@ -883,59 +1053,61 @@ static const ::google::protobuf::internal::EnumEntry TensorProto_DataType_entrie
         {{&TensorProto_DataType_names[31], 6}, 11},
         {{&TensorProto_DataType_names[37], 5}, 1},
         {{&TensorProto_DataType_names[42], 7}, 10},
-        {{&TensorProto_DataType_names[49], 12}, 17},
-        {{&TensorProto_DataType_names[61], 14}, 18},
-        {{&TensorProto_DataType_names[75], 10}, 19},
-        {{&TensorProto_DataType_names[85], 14}, 20},
-        {{&TensorProto_DataType_names[99], 5}, 5},
-        {{&TensorProto_DataType_names[104], 5}, 6},
-        {{&TensorProto_DataType_names[109], 4}, 22},
-        {{&TensorProto_DataType_names[113], 5}, 7},
-        {{&TensorProto_DataType_names[118], 4}, 3},
-        {{&TensorProto_DataType_names[122], 6}, 8},
-        {{&TensorProto_DataType_names[128], 6}, 4},
-        {{&TensorProto_DataType_names[134], 6}, 12},
-        {{&TensorProto_DataType_names[140], 5}, 21},
-        {{&TensorProto_DataType_names[145], 6}, 13},
-        {{&TensorProto_DataType_names[151], 5}, 2},
-        {{&TensorProto_DataType_names[156], 9}, 0},
+        {{&TensorProto_DataType_names[49], 10}, 23},
+        {{&TensorProto_DataType_names[59], 12}, 17},
+        {{&TensorProto_DataType_names[71], 14}, 18},
+        {{&TensorProto_DataType_names[85], 10}, 19},
+        {{&TensorProto_DataType_names[95], 14}, 20},
+        {{&TensorProto_DataType_names[109], 5}, 5},
+        {{&TensorProto_DataType_names[114], 5}, 6},
+        {{&TensorProto_DataType_names[119], 4}, 22},
+        {{&TensorProto_DataType_names[123], 5}, 7},
+        {{&TensorProto_DataType_names[128], 4}, 3},
+        {{&TensorProto_DataType_names[132], 6}, 8},
+        {{&TensorProto_DataType_names[138], 6}, 4},
+        {{&TensorProto_DataType_names[144], 6}, 12},
+        {{&TensorProto_DataType_names[150], 5}, 21},
+        {{&TensorProto_DataType_names[155], 6}, 13},
+        {{&TensorProto_DataType_names[161], 5}, 2},
+        {{&TensorProto_DataType_names[166], 9}, 0},
 };
 
 static const int TensorProto_DataType_entries_by_number[] = {
-    22,  // 0 -> UNDEFINED
+    23,  // 0 -> UNDEFINED
     5,  // 1 -> FLOAT
-    21,  // 2 -> UINT8
-    15,  // 3 -> INT8
-    17,  // 4 -> UINT16
-    11,  // 5 -> INT16
-    12,  // 6 -> INT32
-    14,  // 7 -> INT64
-    16,  // 8 -> STRING
+    22,  // 2 -> UINT8
+    16,  // 3 -> INT8
+    18,  // 4 -> UINT16
+    12,  // 5 -> INT16
+    13,  // 6 -> INT32
+    15,  // 7 -> INT64
+    17,  // 8 -> STRING
     1,  // 9 -> BOOL
     6,  // 10 -> FLOAT16
     4,  // 11 -> DOUBLE
-    18,  // 12 -> UINT32
-    20,  // 13 -> UINT64
+    19,  // 12 -> UINT32
+    21,  // 13 -> UINT64
     3,  // 14 -> COMPLEX64
     2,  // 15 -> COMPLEX128
     0,  // 16 -> BFLOAT16
-    7,  // 17 -> FLOAT8E4M3FN
-    8,  // 18 -> FLOAT8E4M3FNUZ
-    9,  // 19 -> FLOAT8E5M2
-    10,  // 20 -> FLOAT8E5M2FNUZ
-    19,  // 21 -> UINT4
-    13,  // 22 -> INT4
+    8,  // 17 -> FLOAT8E4M3FN
+    9,  // 18 -> FLOAT8E4M3FNUZ
+    10,  // 19 -> FLOAT8E5M2
+    11,  // 20 -> FLOAT8E5M2FNUZ
+    20,  // 21 -> UINT4
+    14,  // 22 -> INT4
+    7,  // 23 -> FLOAT4E2M1
 };
 
 const std::string& TensorProto_DataType_Name(TensorProto_DataType value) {
   static const bool kDummy =
       ::google::protobuf::internal::InitializeEnumStrings(
           TensorProto_DataType_entries, TensorProto_DataType_entries_by_number,
-          23, TensorProto_DataType_strings);
+          24, TensorProto_DataType_strings);
   (void)kDummy;
 
   int idx = ::google::protobuf::internal::LookUpEnumName(
-      TensorProto_DataType_entries, TensorProto_DataType_entries_by_number, 23,
+      TensorProto_DataType_entries, TensorProto_DataType_entries_by_number, 24,
       value);
   return idx == -1 ? ::google::protobuf::internal::GetEmptyString()
                    : TensorProto_DataType_strings[idx].get();
@@ -944,7 +1116,7 @@ const std::string& TensorProto_DataType_Name(TensorProto_DataType value) {
 bool TensorProto_DataType_Parse(absl::string_view name, TensorProto_DataType* value) {
   int int_value;
   bool success = ::google::protobuf::internal::LookUpEnumValue(
-      TensorProto_DataType_entries, 23, name, &int_value);
+      TensorProto_DataType_entries, 24, name, &int_value);
   if (success) {
     *value = static_cast<TensorProto_DataType>(int_value);
   }
@@ -976,6 +1148,7 @@ constexpr TensorProto_DataType TensorProto::FLOAT8E5M2;
 constexpr TensorProto_DataType TensorProto::FLOAT8E5M2FNUZ;
 constexpr TensorProto_DataType TensorProto::UINT4;
 constexpr TensorProto_DataType TensorProto::INT4;
+constexpr TensorProto_DataType TensorProto::FLOAT4E2M1;
 constexpr TensorProto_DataType TensorProto::DataType_MIN;
 constexpr TensorProto_DataType TensorProto::DataType_MAX;
 constexpr int TensorProto::DataType_ARRAYSIZE;
@@ -1041,12 +1214,12 @@ constexpr int TensorProto::DataLocation_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) &&
         // (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 PROTOBUF_CONSTINIT const uint32_t Version_internal_data_[] = {
-    720896u, 0u, };
+    786432u, 0u, };
 bool Version_IsValid(int value) {
-  return 0 <= value && value <= 10;
+  return 0 <= value && value <= 11;
 }
 static ::google::protobuf::internal::ExplicitlyConstructed<std::string>
-    Version_strings[11] = {};
+    Version_strings[12] = {};
 
 static const char Version_names[] = {
     "IR_VERSION"
@@ -1059,12 +1232,13 @@ static const char Version_names[] = {
     "IR_VERSION_2020_5_8"
     "IR_VERSION_2021_7_30"
     "IR_VERSION_2023_5_5"
+    "IR_VERSION_2024_3_25"
     "_START_VERSION"
 };
 
 static const ::google::protobuf::internal::EnumEntry Version_entries[] =
     {
-        {{&Version_names[0], 10}, 10},
+        {{&Version_names[0], 10}, 11},
         {{&Version_names[10], 21}, 1},
         {{&Version_names[31], 21}, 2},
         {{&Version_names[52], 20}, 3},
@@ -1074,11 +1248,12 @@ static const ::google::protobuf::internal::EnumEntry Version_entries[] =
         {{&Version_names[132], 19}, 7},
         {{&Version_names[151], 20}, 8},
         {{&Version_names[171], 19}, 9},
-        {{&Version_names[190], 14}, 0},
+        {{&Version_names[190], 20}, 10},
+        {{&Version_names[210], 14}, 0},
 };
 
 static const int Version_entries_by_number[] = {
-    10,  // 0 -> _START_VERSION
+    11,  // 0 -> _START_VERSION
     1,  // 1 -> IR_VERSION_2017_10_10
     2,  // 2 -> IR_VERSION_2017_10_30
     3,  // 3 -> IR_VERSION_2017_11_3
@@ -1088,18 +1263,19 @@ static const int Version_entries_by_number[] = {
     7,  // 7 -> IR_VERSION_2020_5_8
     8,  // 8 -> IR_VERSION_2021_7_30
     9,  // 9 -> IR_VERSION_2023_5_5
-    0,  // 10 -> IR_VERSION
+    10,  // 10 -> IR_VERSION_2024_3_25
+    0,  // 11 -> IR_VERSION
 };
 
 const std::string& Version_Name(Version value) {
   static const bool kDummy =
       ::google::protobuf::internal::InitializeEnumStrings(
           Version_entries, Version_entries_by_number,
-          11, Version_strings);
+          12, Version_strings);
   (void)kDummy;
 
   int idx = ::google::protobuf::internal::LookUpEnumName(
-      Version_entries, Version_entries_by_number, 11,
+      Version_entries, Version_entries_by_number, 12,
       value);
   return idx == -1 ? ::google::protobuf::internal::GetEmptyString()
                    : Version_strings[idx].get();
@@ -1108,7 +1284,7 @@ const std::string& Version_Name(Version value) {
 bool Version_Parse(absl::string_view name, Version* value) {
   int int_value;
   bool success = ::google::protobuf::internal::LookUpEnumValue(
-      Version_entries, 11, name, &int_value);
+      Version_entries, 12, name, &int_value);
   if (success) {
     *value = static_cast<Version>(int_value);
   }
@@ -2353,6 +2529,7 @@ inline PROTOBUF_NDEBUG_INLINE NodeProto::Impl_::Impl_(
         output_{visibility, arena, from.output_},
         attribute_{visibility, arena, from.attribute_},
         metadata_props_{visibility, arena, from.metadata_props_},
+        device_configurations_{visibility, arena, from.device_configurations_},
         name_(arena, from.name_),
         op_type_(arena, from.op_type_),
         doc_string_(arena, from.doc_string_),
@@ -2383,6 +2560,7 @@ inline PROTOBUF_NDEBUG_INLINE NodeProto::Impl_::Impl_(
         output_{visibility, arena},
         attribute_{visibility, arena},
         metadata_props_{visibility, arena},
+        device_configurations_{visibility, arena},
         name_(arena),
         op_type_(arena),
         doc_string_(arena),
@@ -2430,6 +2608,10 @@ constexpr auto NodeProto::InternalNewImpl_() {
           decltype(NodeProto::_impl_.metadata_props_)::
               InternalGetArenaOffset(
                   ::google::protobuf::MessageLite::internal_visibility()),
+      PROTOBUF_FIELD_OFFSET(NodeProto, _impl_.device_configurations_) +
+          decltype(NodeProto::_impl_.device_configurations_)::
+              InternalGetArenaOffset(
+                  ::google::protobuf::MessageLite::internal_visibility()),
   });
   if (arena_bits.has_value()) {
     return ::google::protobuf::internal::MessageCreator::CopyInit(
@@ -2464,16 +2646,16 @@ const ::google::protobuf::internal::ClassData* NodeProto::GetClassData() const {
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<4, 9, 2, 0, 2> NodeProto::_table_ = {
+const ::_pbi::TcParseTable<4, 10, 3, 0, 2> NodeProto::_table_ = {
   {
     PROTOBUF_FIELD_OFFSET(NodeProto, _impl_._has_bits_),
     0, // no _extensions_
-    9, 120,  // max_field_number, fast_idx_mask
+    10, 120,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294966784,  // skipmap
+    4294966272,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    9,  // num_field_entries
-    2,  // num_aux_entries
+    10,  // num_field_entries
+    3,  // num_aux_entries
     offsetof(decltype(_table_), aux_entries),
     _class_data_.base(),
     nullptr,  // post_loop_handler
@@ -2510,7 +2692,9 @@ const ::_pbi::TcParseTable<4, 9, 2, 0, 2> NodeProto::_table_ = {
     // repeated .onnx.StringStringEntryProto metadata_props = 9;
     {::_pbi::TcParser::FastMtR1,
      {74, 63, 1, PROTOBUF_FIELD_OFFSET(NodeProto, _impl_.metadata_props_)}},
-    {::_pbi::TcParser::MiniParse, {}},
+    // repeated .onnx.NodeDeviceConfigurationProto device_configurations = 10;
+    {::_pbi::TcParser::FastMtR1,
+     {82, 63, 2, PROTOBUF_FIELD_OFFSET(NodeProto, _impl_.device_configurations_)}},
     {::_pbi::TcParser::MiniParse, {}},
     {::_pbi::TcParser::MiniParse, {}},
     {::_pbi::TcParser::MiniParse, {}},
@@ -2546,9 +2730,13 @@ const ::_pbi::TcParseTable<4, 9, 2, 0, 2> NodeProto::_table_ = {
     // repeated .onnx.StringStringEntryProto metadata_props = 9;
     {PROTOBUF_FIELD_OFFSET(NodeProto, _impl_.metadata_props_), -1, 1,
     (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+    // repeated .onnx.NodeDeviceConfigurationProto device_configurations = 10;
+    {PROTOBUF_FIELD_OFFSET(NodeProto, _impl_.device_configurations_), -1, 2,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
     {::_pbi::TcParser::GetTable<::onnx::AttributeProto>()},
     {::_pbi::TcParser::GetTable<::onnx::StringStringEntryProto>()},
+    {::_pbi::TcParser::GetTable<::onnx::NodeDeviceConfigurationProto>()},
   }}, {{
   }},
 };
@@ -2564,6 +2752,7 @@ PROTOBUF_NOINLINE void NodeProto::Clear() {
   _impl_.output_.Clear();
   _impl_.attribute_.Clear();
   _impl_.metadata_props_.Clear();
+  _impl_.device_configurations_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
@@ -2666,6 +2855,17 @@ PROTOBUF_NOINLINE void NodeProto::Clear() {
                     target, stream);
           }
 
+          // repeated .onnx.NodeDeviceConfigurationProto device_configurations = 10;
+          for (unsigned i = 0, n = static_cast<unsigned>(
+                                   this_._internal_device_configurations_size());
+               i < n; i++) {
+            const auto& repfield = this_._internal_device_configurations().Get(i);
+            target =
+                ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                    10, repfield, repfield.GetCachedSize(),
+                    target, stream);
+          }
+
           if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
             target = stream->WriteRaw(
                 this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).data(),
@@ -2723,6 +2923,13 @@ PROTOBUF_NOINLINE void NodeProto::Clear() {
                 total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
               }
             }
+            // repeated .onnx.NodeDeviceConfigurationProto device_configurations = 10;
+            {
+              total_size += 1UL * this_._internal_device_configurations_size();
+              for (const auto& msg : this_._internal_device_configurations()) {
+                total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+              }
+            }
           }
           cached_has_bits = this_._impl_._has_bits_[0];
           if (cached_has_bits & 0x0000001fu) {
@@ -2773,6 +2980,8 @@ void NodeProto::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::googl
       from._internal_attribute());
   _this->_internal_mutable_metadata_props()->MergeFrom(
       from._internal_metadata_props());
+  _this->_internal_mutable_device_configurations()->MergeFrom(
+      from._internal_device_configurations());
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
@@ -2813,11 +3022,1553 @@ void NodeProto::InternalSwap(NodeProto* PROTOBUF_RESTRICT other) {
   _impl_.output_.InternalSwap(&other->_impl_.output_);
   _impl_.attribute_.InternalSwap(&other->_impl_.attribute_);
   _impl_.metadata_props_.InternalSwap(&other->_impl_.metadata_props_);
+  _impl_.device_configurations_.InternalSwap(&other->_impl_.device_configurations_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, &other->_impl_.name_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.op_type_, &other->_impl_.op_type_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.doc_string_, &other->_impl_.doc_string_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.domain_, &other->_impl_.domain_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.overload_, &other->_impl_.overload_, arena);
+}
+
+// ===================================================================
+
+class IntIntListEntryProto::_Internal {
+ public:
+  using HasBits =
+      decltype(std::declval<IntIntListEntryProto>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(IntIntListEntryProto, _impl_._has_bits_);
+};
+
+IntIntListEntryProto::IntIntListEntryProto(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:onnx.IntIntListEntryProto)
+}
+inline PROTOBUF_NDEBUG_INLINE IntIntListEntryProto::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::onnx::IntIntListEntryProto& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        value_{visibility, arena, from.value_} {}
+
+IntIntListEntryProto::IntIntListEntryProto(
+    ::google::protobuf::Arena* arena,
+    const IntIntListEntryProto& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  IntIntListEntryProto* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<std::string>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  _impl_.key_ = from._impl_.key_;
+
+  // @@protoc_insertion_point(copy_constructor:onnx.IntIntListEntryProto)
+}
+inline PROTOBUF_NDEBUG_INLINE IntIntListEntryProto::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        value_{visibility, arena} {}
+
+inline void IntIntListEntryProto::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.key_ = {};
+}
+IntIntListEntryProto::~IntIntListEntryProto() {
+  // @@protoc_insertion_point(destructor:onnx.IntIntListEntryProto)
+  SharedDtor(*this);
+}
+inline void IntIntListEntryProto::SharedDtor(MessageLite& self) {
+  IntIntListEntryProto& this_ = static_cast<IntIntListEntryProto&>(self);
+  this_._internal_metadata_.Delete<std::string>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.~Impl_();
+}
+
+inline void* IntIntListEntryProto::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) IntIntListEntryProto(arena);
+}
+constexpr auto IntIntListEntryProto::InternalNewImpl_() {
+  constexpr auto arena_bits = ::google::protobuf::internal::EncodePlacementArenaOffsets({
+      PROTOBUF_FIELD_OFFSET(IntIntListEntryProto, _impl_.value_) +
+          decltype(IntIntListEntryProto::_impl_.value_)::
+              InternalGetArenaOffset(
+                  ::google::protobuf::MessageLite::internal_visibility()),
+  });
+  if (arena_bits.has_value()) {
+    return ::google::protobuf::internal::MessageCreator::ZeroInit(
+        sizeof(IntIntListEntryProto), alignof(IntIntListEntryProto), *arena_bits);
+  } else {
+    return ::google::protobuf::internal::MessageCreator(&IntIntListEntryProto::PlacementNew_,
+                                 sizeof(IntIntListEntryProto),
+                                 alignof(IntIntListEntryProto));
+  }
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataLite<26> IntIntListEntryProto::_class_data_ = {
+    {
+        &_IntIntListEntryProto_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &IntIntListEntryProto::MergeImpl,
+        ::google::protobuf::MessageLite::GetNewImpl<IntIntListEntryProto>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &IntIntListEntryProto::SharedDtor,
+        ::google::protobuf::MessageLite::GetClearImpl<IntIntListEntryProto>(), &IntIntListEntryProto::ByteSizeLong,
+            &IntIntListEntryProto::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(IntIntListEntryProto, _impl_._cached_size_),
+        true,
+    },
+    "onnx.IntIntListEntryProto",
+};
+const ::google::protobuf::internal::ClassData* IntIntListEntryProto::GetClassData() const {
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<1, 2, 0, 0, 2> IntIntListEntryProto::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(IntIntListEntryProto, _impl_._has_bits_),
+    0, // no _extensions_
+    2, 8,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967292,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    2,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallbackLite,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::onnx::IntIntListEntryProto>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // repeated int64 value = 2;
+    {::_pbi::TcParser::FastV64R1,
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(IntIntListEntryProto, _impl_.value_)}},
+    // optional int64 key = 1;
+    {::_pbi::TcParser::FastV64S1,
+     {8, 0, 0, PROTOBUF_FIELD_OFFSET(IntIntListEntryProto, _impl_.key_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // optional int64 key = 1;
+    {PROTOBUF_FIELD_OFFSET(IntIntListEntryProto, _impl_.key_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kInt64)},
+    // repeated int64 value = 2;
+    {PROTOBUF_FIELD_OFFSET(IntIntListEntryProto, _impl_.value_), -1, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kInt64)},
+  }},
+  // no aux_entries
+  {{
+  }},
+};
+
+PROTOBUF_NOINLINE void IntIntListEntryProto::Clear() {
+// @@protoc_insertion_point(message_clear_start:onnx.IntIntListEntryProto)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.value_.Clear();
+  _impl_.key_ = ::int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<std::string>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* IntIntListEntryProto::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const IntIntListEntryProto& this_ = static_cast<const IntIntListEntryProto&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* IntIntListEntryProto::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const IntIntListEntryProto& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:onnx.IntIntListEntryProto)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          cached_has_bits = this_._impl_._has_bits_[0];
+          // optional int64 key = 1;
+          if (cached_has_bits & 0x00000001u) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt64ToArrayWithField<1>(
+                    stream, this_._internal_key(), target);
+          }
+
+          // repeated int64 value = 2;
+          for (int i = 0, n = this_._internal_value_size(); i < n; ++i) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteInt64ToArray(
+                2, this_._internal_value().Get(i), target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target = stream->WriteRaw(
+                this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).data(),
+                static_cast<int>(this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size()), target);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:onnx.IntIntListEntryProto)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t IntIntListEntryProto::ByteSizeLong(const MessageLite& base) {
+          const IntIntListEntryProto& this_ = static_cast<const IntIntListEntryProto&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t IntIntListEntryProto::ByteSizeLong() const {
+          const IntIntListEntryProto& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:onnx.IntIntListEntryProto)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // repeated int64 value = 2;
+            {
+              std::size_t data_size = ::_pbi::WireFormatLite::Int64Size(
+                  this_._internal_value());
+              std::size_t tag_size = std::size_t{1} *
+                  ::_pbi::FromIntSize(this_._internal_value_size());
+              total_size += tag_size + data_size;
+            }
+          }
+           {
+            // optional int64 key = 1;
+            cached_has_bits = this_._impl_._has_bits_[0];
+            if (cached_has_bits & 0x00000001u) {
+              total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+                  this_._internal_key());
+            }
+          }
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            total_size += this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size();
+          }
+          this_._impl_._cached_size_.Set(::_pbi::ToCachedSize(total_size));
+          return total_size;
+        }
+
+void IntIntListEntryProto::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<IntIntListEntryProto*>(&to_msg);
+  auto& from = static_cast<const IntIntListEntryProto&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:onnx.IntIntListEntryProto)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_mutable_value()->MergeFrom(from._internal_value());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _this->_impl_.key_ = from._impl_.key_;
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void IntIntListEntryProto::CopyFrom(const IntIntListEntryProto& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:onnx.IntIntListEntryProto)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void IntIntListEntryProto::InternalSwap(IntIntListEntryProto* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.value_.InternalSwap(&other->_impl_.value_);
+        swap(_impl_.key_, other->_impl_.key_);
+}
+
+// ===================================================================
+
+class NodeDeviceConfigurationProto::_Internal {
+ public:
+  using HasBits =
+      decltype(std::declval<NodeDeviceConfigurationProto>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(NodeDeviceConfigurationProto, _impl_._has_bits_);
+};
+
+NodeDeviceConfigurationProto::NodeDeviceConfigurationProto(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:onnx.NodeDeviceConfigurationProto)
+}
+inline PROTOBUF_NDEBUG_INLINE NodeDeviceConfigurationProto::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::onnx::NodeDeviceConfigurationProto& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        sharding_spec_{visibility, arena, from.sharding_spec_},
+        configuration_id_(arena, from.configuration_id_) {}
+
+NodeDeviceConfigurationProto::NodeDeviceConfigurationProto(
+    ::google::protobuf::Arena* arena,
+    const NodeDeviceConfigurationProto& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  NodeDeviceConfigurationProto* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<std::string>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  _impl_.pipeline_stage_ = from._impl_.pipeline_stage_;
+
+  // @@protoc_insertion_point(copy_constructor:onnx.NodeDeviceConfigurationProto)
+}
+inline PROTOBUF_NDEBUG_INLINE NodeDeviceConfigurationProto::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        sharding_spec_{visibility, arena},
+        configuration_id_(arena) {}
+
+inline void NodeDeviceConfigurationProto::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.pipeline_stage_ = {};
+}
+NodeDeviceConfigurationProto::~NodeDeviceConfigurationProto() {
+  // @@protoc_insertion_point(destructor:onnx.NodeDeviceConfigurationProto)
+  SharedDtor(*this);
+}
+inline void NodeDeviceConfigurationProto::SharedDtor(MessageLite& self) {
+  NodeDeviceConfigurationProto& this_ = static_cast<NodeDeviceConfigurationProto&>(self);
+  this_._internal_metadata_.Delete<std::string>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.configuration_id_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+inline void* NodeDeviceConfigurationProto::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) NodeDeviceConfigurationProto(arena);
+}
+constexpr auto NodeDeviceConfigurationProto::InternalNewImpl_() {
+  constexpr auto arena_bits = ::google::protobuf::internal::EncodePlacementArenaOffsets({
+      PROTOBUF_FIELD_OFFSET(NodeDeviceConfigurationProto, _impl_.sharding_spec_) +
+          decltype(NodeDeviceConfigurationProto::_impl_.sharding_spec_)::
+              InternalGetArenaOffset(
+                  ::google::protobuf::MessageLite::internal_visibility()),
+  });
+  if (arena_bits.has_value()) {
+    return ::google::protobuf::internal::MessageCreator::CopyInit(
+        sizeof(NodeDeviceConfigurationProto), alignof(NodeDeviceConfigurationProto), *arena_bits);
+  } else {
+    return ::google::protobuf::internal::MessageCreator(&NodeDeviceConfigurationProto::PlacementNew_,
+                                 sizeof(NodeDeviceConfigurationProto),
+                                 alignof(NodeDeviceConfigurationProto));
+  }
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataLite<34> NodeDeviceConfigurationProto::_class_data_ = {
+    {
+        &_NodeDeviceConfigurationProto_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &NodeDeviceConfigurationProto::MergeImpl,
+        ::google::protobuf::MessageLite::GetNewImpl<NodeDeviceConfigurationProto>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &NodeDeviceConfigurationProto::SharedDtor,
+        ::google::protobuf::MessageLite::GetClearImpl<NodeDeviceConfigurationProto>(), &NodeDeviceConfigurationProto::ByteSizeLong,
+            &NodeDeviceConfigurationProto::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(NodeDeviceConfigurationProto, _impl_._cached_size_),
+        true,
+    },
+    "onnx.NodeDeviceConfigurationProto",
+};
+const ::google::protobuf::internal::ClassData* NodeDeviceConfigurationProto::GetClassData() const {
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 3, 1, 0, 2> NodeDeviceConfigurationProto::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(NodeDeviceConfigurationProto, _impl_._has_bits_),
+    0, // no _extensions_
+    3, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967288,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    3,  // num_field_entries
+    1,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallbackLite,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::onnx::NodeDeviceConfigurationProto>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+    // optional string configuration_id = 1;
+    {::_pbi::TcParser::FastBS1,
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(NodeDeviceConfigurationProto, _impl_.configuration_id_)}},
+    // repeated .onnx.ShardingSpecProto sharding_spec = 2;
+    {::_pbi::TcParser::FastMtR1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(NodeDeviceConfigurationProto, _impl_.sharding_spec_)}},
+    // optional int32 pipeline_stage = 3;
+    {::_pbi::TcParser::FastV32S1,
+     {24, 1, 0, PROTOBUF_FIELD_OFFSET(NodeDeviceConfigurationProto, _impl_.pipeline_stage_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // optional string configuration_id = 1;
+    {PROTOBUF_FIELD_OFFSET(NodeDeviceConfigurationProto, _impl_.configuration_id_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // repeated .onnx.ShardingSpecProto sharding_spec = 2;
+    {PROTOBUF_FIELD_OFFSET(NodeDeviceConfigurationProto, _impl_.sharding_spec_), -1, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+    // optional int32 pipeline_stage = 3;
+    {PROTOBUF_FIELD_OFFSET(NodeDeviceConfigurationProto, _impl_.pipeline_stage_), _Internal::kHasBitsOffset + 1, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kInt32)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::onnx::ShardingSpecProto>()},
+  }}, {{
+  }},
+};
+
+PROTOBUF_NOINLINE void NodeDeviceConfigurationProto::Clear() {
+// @@protoc_insertion_point(message_clear_start:onnx.NodeDeviceConfigurationProto)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.sharding_spec_.Clear();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.configuration_id_.ClearNonDefaultToEmpty();
+  }
+  _impl_.pipeline_stage_ = 0;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<std::string>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* NodeDeviceConfigurationProto::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const NodeDeviceConfigurationProto& this_ = static_cast<const NodeDeviceConfigurationProto&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* NodeDeviceConfigurationProto::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const NodeDeviceConfigurationProto& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:onnx.NodeDeviceConfigurationProto)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          cached_has_bits = this_._impl_._has_bits_[0];
+          // optional string configuration_id = 1;
+          if (cached_has_bits & 0x00000001u) {
+            const std::string& _s = this_._internal_configuration_id();
+            target = stream->WriteStringMaybeAliased(1, _s, target);
+          }
+
+          // repeated .onnx.ShardingSpecProto sharding_spec = 2;
+          for (unsigned i = 0, n = static_cast<unsigned>(
+                                   this_._internal_sharding_spec_size());
+               i < n; i++) {
+            const auto& repfield = this_._internal_sharding_spec().Get(i);
+            target =
+                ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                    2, repfield, repfield.GetCachedSize(),
+                    target, stream);
+          }
+
+          // optional int32 pipeline_stage = 3;
+          if (cached_has_bits & 0x00000002u) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<3>(
+                    stream, this_._internal_pipeline_stage(), target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target = stream->WriteRaw(
+                this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).data(),
+                static_cast<int>(this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size()), target);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:onnx.NodeDeviceConfigurationProto)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t NodeDeviceConfigurationProto::ByteSizeLong(const MessageLite& base) {
+          const NodeDeviceConfigurationProto& this_ = static_cast<const NodeDeviceConfigurationProto&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t NodeDeviceConfigurationProto::ByteSizeLong() const {
+          const NodeDeviceConfigurationProto& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:onnx.NodeDeviceConfigurationProto)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // repeated .onnx.ShardingSpecProto sharding_spec = 2;
+            {
+              total_size += 1UL * this_._internal_sharding_spec_size();
+              for (const auto& msg : this_._internal_sharding_spec()) {
+                total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+              }
+            }
+          }
+          cached_has_bits = this_._impl_._has_bits_[0];
+          if (cached_has_bits & 0x00000003u) {
+            // optional string configuration_id = 1;
+            if (cached_has_bits & 0x00000001u) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_configuration_id());
+            }
+            // optional int32 pipeline_stage = 3;
+            if (cached_has_bits & 0x00000002u) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_pipeline_stage());
+            }
+          }
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            total_size += this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size();
+          }
+          this_._impl_._cached_size_.Set(::_pbi::ToCachedSize(total_size));
+          return total_size;
+        }
+
+void NodeDeviceConfigurationProto::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<NodeDeviceConfigurationProto*>(&to_msg);
+  auto& from = static_cast<const NodeDeviceConfigurationProto&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:onnx.NodeDeviceConfigurationProto)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_mutable_sharding_spec()->MergeFrom(
+      from._internal_sharding_spec());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_configuration_id(from._internal_configuration_id());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.pipeline_stage_ = from._impl_.pipeline_stage_;
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void NodeDeviceConfigurationProto::CopyFrom(const NodeDeviceConfigurationProto& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:onnx.NodeDeviceConfigurationProto)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void NodeDeviceConfigurationProto::InternalSwap(NodeDeviceConfigurationProto* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.sharding_spec_.InternalSwap(&other->_impl_.sharding_spec_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.configuration_id_, &other->_impl_.configuration_id_, arena);
+        swap(_impl_.pipeline_stage_, other->_impl_.pipeline_stage_);
+}
+
+// ===================================================================
+
+class ShardingSpecProto::_Internal {
+ public:
+  using HasBits =
+      decltype(std::declval<ShardingSpecProto>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_._has_bits_);
+};
+
+ShardingSpecProto::ShardingSpecProto(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:onnx.ShardingSpecProto)
+}
+inline PROTOBUF_NDEBUG_INLINE ShardingSpecProto::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::onnx::ShardingSpecProto& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        device_{visibility, arena, from.device_},
+        index_to_device_group_map_{visibility, arena, from.index_to_device_group_map_},
+        sharded_dim_{visibility, arena, from.sharded_dim_},
+        tensor_name_(arena, from.tensor_name_) {}
+
+ShardingSpecProto::ShardingSpecProto(
+    ::google::protobuf::Arena* arena,
+    const ShardingSpecProto& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  ShardingSpecProto* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<std::string>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:onnx.ShardingSpecProto)
+}
+inline PROTOBUF_NDEBUG_INLINE ShardingSpecProto::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        device_{visibility, arena},
+        index_to_device_group_map_{visibility, arena},
+        sharded_dim_{visibility, arena},
+        tensor_name_(arena) {}
+
+inline void ShardingSpecProto::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+ShardingSpecProto::~ShardingSpecProto() {
+  // @@protoc_insertion_point(destructor:onnx.ShardingSpecProto)
+  SharedDtor(*this);
+}
+inline void ShardingSpecProto::SharedDtor(MessageLite& self) {
+  ShardingSpecProto& this_ = static_cast<ShardingSpecProto&>(self);
+  this_._internal_metadata_.Delete<std::string>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.tensor_name_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+inline void* ShardingSpecProto::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) ShardingSpecProto(arena);
+}
+constexpr auto ShardingSpecProto::InternalNewImpl_() {
+  constexpr auto arena_bits = ::google::protobuf::internal::EncodePlacementArenaOffsets({
+      PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_.device_) +
+          decltype(ShardingSpecProto::_impl_.device_)::
+              InternalGetArenaOffset(
+                  ::google::protobuf::MessageLite::internal_visibility()),
+      PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_.index_to_device_group_map_) +
+          decltype(ShardingSpecProto::_impl_.index_to_device_group_map_)::
+              InternalGetArenaOffset(
+                  ::google::protobuf::MessageLite::internal_visibility()),
+      PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_.sharded_dim_) +
+          decltype(ShardingSpecProto::_impl_.sharded_dim_)::
+              InternalGetArenaOffset(
+                  ::google::protobuf::MessageLite::internal_visibility()),
+  });
+  if (arena_bits.has_value()) {
+    return ::google::protobuf::internal::MessageCreator::CopyInit(
+        sizeof(ShardingSpecProto), alignof(ShardingSpecProto), *arena_bits);
+  } else {
+    return ::google::protobuf::internal::MessageCreator(&ShardingSpecProto::PlacementNew_,
+                                 sizeof(ShardingSpecProto),
+                                 alignof(ShardingSpecProto));
+  }
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataLite<23> ShardingSpecProto::_class_data_ = {
+    {
+        &_ShardingSpecProto_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &ShardingSpecProto::MergeImpl,
+        ::google::protobuf::MessageLite::GetNewImpl<ShardingSpecProto>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &ShardingSpecProto::SharedDtor,
+        ::google::protobuf::MessageLite::GetClearImpl<ShardingSpecProto>(), &ShardingSpecProto::ByteSizeLong,
+            &ShardingSpecProto::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_._cached_size_),
+        true,
+    },
+    "onnx.ShardingSpecProto",
+};
+const ::google::protobuf::internal::ClassData* ShardingSpecProto::GetClassData() const {
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 4, 2, 0, 2> ShardingSpecProto::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_._has_bits_),
+    0, // no _extensions_
+    4, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967280,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    4,  // num_field_entries
+    2,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallbackLite,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::onnx::ShardingSpecProto>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // repeated .onnx.ShardedDimProto sharded_dim = 4;
+    {::_pbi::TcParser::FastMtR1,
+     {34, 63, 1, PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_.sharded_dim_)}},
+    // optional string tensor_name = 1;
+    {::_pbi::TcParser::FastBS1,
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_.tensor_name_)}},
+    // repeated int64 device = 2;
+    {::_pbi::TcParser::FastV64R1,
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_.device_)}},
+    // repeated .onnx.IntIntListEntryProto index_to_device_group_map = 3;
+    {::_pbi::TcParser::FastMtR1,
+     {26, 63, 0, PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_.index_to_device_group_map_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // optional string tensor_name = 1;
+    {PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_.tensor_name_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // repeated int64 device = 2;
+    {PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_.device_), -1, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kInt64)},
+    // repeated .onnx.IntIntListEntryProto index_to_device_group_map = 3;
+    {PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_.index_to_device_group_map_), -1, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+    // repeated .onnx.ShardedDimProto sharded_dim = 4;
+    {PROTOBUF_FIELD_OFFSET(ShardingSpecProto, _impl_.sharded_dim_), -1, 1,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::onnx::IntIntListEntryProto>()},
+    {::_pbi::TcParser::GetTable<::onnx::ShardedDimProto>()},
+  }}, {{
+  }},
+};
+
+PROTOBUF_NOINLINE void ShardingSpecProto::Clear() {
+// @@protoc_insertion_point(message_clear_start:onnx.ShardingSpecProto)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.device_.Clear();
+  _impl_.index_to_device_group_map_.Clear();
+  _impl_.sharded_dim_.Clear();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.tensor_name_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<std::string>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* ShardingSpecProto::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const ShardingSpecProto& this_ = static_cast<const ShardingSpecProto&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* ShardingSpecProto::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const ShardingSpecProto& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:onnx.ShardingSpecProto)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          cached_has_bits = this_._impl_._has_bits_[0];
+          // optional string tensor_name = 1;
+          if (cached_has_bits & 0x00000001u) {
+            const std::string& _s = this_._internal_tensor_name();
+            target = stream->WriteStringMaybeAliased(1, _s, target);
+          }
+
+          // repeated int64 device = 2;
+          for (int i = 0, n = this_._internal_device_size(); i < n; ++i) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteInt64ToArray(
+                2, this_._internal_device().Get(i), target);
+          }
+
+          // repeated .onnx.IntIntListEntryProto index_to_device_group_map = 3;
+          for (unsigned i = 0, n = static_cast<unsigned>(
+                                   this_._internal_index_to_device_group_map_size());
+               i < n; i++) {
+            const auto& repfield = this_._internal_index_to_device_group_map().Get(i);
+            target =
+                ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                    3, repfield, repfield.GetCachedSize(),
+                    target, stream);
+          }
+
+          // repeated .onnx.ShardedDimProto sharded_dim = 4;
+          for (unsigned i = 0, n = static_cast<unsigned>(
+                                   this_._internal_sharded_dim_size());
+               i < n; i++) {
+            const auto& repfield = this_._internal_sharded_dim().Get(i);
+            target =
+                ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                    4, repfield, repfield.GetCachedSize(),
+                    target, stream);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target = stream->WriteRaw(
+                this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).data(),
+                static_cast<int>(this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size()), target);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:onnx.ShardingSpecProto)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t ShardingSpecProto::ByteSizeLong(const MessageLite& base) {
+          const ShardingSpecProto& this_ = static_cast<const ShardingSpecProto&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t ShardingSpecProto::ByteSizeLong() const {
+          const ShardingSpecProto& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:onnx.ShardingSpecProto)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // repeated int64 device = 2;
+            {
+              std::size_t data_size = ::_pbi::WireFormatLite::Int64Size(
+                  this_._internal_device());
+              std::size_t tag_size = std::size_t{1} *
+                  ::_pbi::FromIntSize(this_._internal_device_size());
+              total_size += tag_size + data_size;
+            }
+            // repeated .onnx.IntIntListEntryProto index_to_device_group_map = 3;
+            {
+              total_size += 1UL * this_._internal_index_to_device_group_map_size();
+              for (const auto& msg : this_._internal_index_to_device_group_map()) {
+                total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+              }
+            }
+            // repeated .onnx.ShardedDimProto sharded_dim = 4;
+            {
+              total_size += 1UL * this_._internal_sharded_dim_size();
+              for (const auto& msg : this_._internal_sharded_dim()) {
+                total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+              }
+            }
+          }
+           {
+            // optional string tensor_name = 1;
+            cached_has_bits = this_._impl_._has_bits_[0];
+            if (cached_has_bits & 0x00000001u) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_tensor_name());
+            }
+          }
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            total_size += this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size();
+          }
+          this_._impl_._cached_size_.Set(::_pbi::ToCachedSize(total_size));
+          return total_size;
+        }
+
+void ShardingSpecProto::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<ShardingSpecProto*>(&to_msg);
+  auto& from = static_cast<const ShardingSpecProto&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:onnx.ShardingSpecProto)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_mutable_device()->MergeFrom(from._internal_device());
+  _this->_internal_mutable_index_to_device_group_map()->MergeFrom(
+      from._internal_index_to_device_group_map());
+  _this->_internal_mutable_sharded_dim()->MergeFrom(
+      from._internal_sharded_dim());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _this->_internal_set_tensor_name(from._internal_tensor_name());
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void ShardingSpecProto::CopyFrom(const ShardingSpecProto& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:onnx.ShardingSpecProto)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void ShardingSpecProto::InternalSwap(ShardingSpecProto* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.device_.InternalSwap(&other->_impl_.device_);
+  _impl_.index_to_device_group_map_.InternalSwap(&other->_impl_.index_to_device_group_map_);
+  _impl_.sharded_dim_.InternalSwap(&other->_impl_.sharded_dim_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.tensor_name_, &other->_impl_.tensor_name_, arena);
+}
+
+// ===================================================================
+
+class ShardedDimProto::_Internal {
+ public:
+  using HasBits =
+      decltype(std::declval<ShardedDimProto>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(ShardedDimProto, _impl_._has_bits_);
+};
+
+ShardedDimProto::ShardedDimProto(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:onnx.ShardedDimProto)
+}
+inline PROTOBUF_NDEBUG_INLINE ShardedDimProto::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::onnx::ShardedDimProto& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        simple_sharding_{visibility, arena, from.simple_sharding_} {}
+
+ShardedDimProto::ShardedDimProto(
+    ::google::protobuf::Arena* arena,
+    const ShardedDimProto& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  ShardedDimProto* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<std::string>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  _impl_.axis_ = from._impl_.axis_;
+
+  // @@protoc_insertion_point(copy_constructor:onnx.ShardedDimProto)
+}
+inline PROTOBUF_NDEBUG_INLINE ShardedDimProto::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        simple_sharding_{visibility, arena} {}
+
+inline void ShardedDimProto::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.axis_ = {};
+}
+ShardedDimProto::~ShardedDimProto() {
+  // @@protoc_insertion_point(destructor:onnx.ShardedDimProto)
+  SharedDtor(*this);
+}
+inline void ShardedDimProto::SharedDtor(MessageLite& self) {
+  ShardedDimProto& this_ = static_cast<ShardedDimProto&>(self);
+  this_._internal_metadata_.Delete<std::string>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.~Impl_();
+}
+
+inline void* ShardedDimProto::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) ShardedDimProto(arena);
+}
+constexpr auto ShardedDimProto::InternalNewImpl_() {
+  constexpr auto arena_bits = ::google::protobuf::internal::EncodePlacementArenaOffsets({
+      PROTOBUF_FIELD_OFFSET(ShardedDimProto, _impl_.simple_sharding_) +
+          decltype(ShardedDimProto::_impl_.simple_sharding_)::
+              InternalGetArenaOffset(
+                  ::google::protobuf::MessageLite::internal_visibility()),
+  });
+  if (arena_bits.has_value()) {
+    return ::google::protobuf::internal::MessageCreator::ZeroInit(
+        sizeof(ShardedDimProto), alignof(ShardedDimProto), *arena_bits);
+  } else {
+    return ::google::protobuf::internal::MessageCreator(&ShardedDimProto::PlacementNew_,
+                                 sizeof(ShardedDimProto),
+                                 alignof(ShardedDimProto));
+  }
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataLite<21> ShardedDimProto::_class_data_ = {
+    {
+        &_ShardedDimProto_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &ShardedDimProto::MergeImpl,
+        ::google::protobuf::MessageLite::GetNewImpl<ShardedDimProto>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &ShardedDimProto::SharedDtor,
+        ::google::protobuf::MessageLite::GetClearImpl<ShardedDimProto>(), &ShardedDimProto::ByteSizeLong,
+            &ShardedDimProto::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(ShardedDimProto, _impl_._cached_size_),
+        true,
+    },
+    "onnx.ShardedDimProto",
+};
+const ::google::protobuf::internal::ClassData* ShardedDimProto::GetClassData() const {
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<1, 2, 1, 0, 2> ShardedDimProto::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(ShardedDimProto, _impl_._has_bits_),
+    0, // no _extensions_
+    2, 8,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967292,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    2,  // num_field_entries
+    1,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallbackLite,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::onnx::ShardedDimProto>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // repeated .onnx.SimpleShardedDimProto simple_sharding = 2;
+    {::_pbi::TcParser::FastMtR1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(ShardedDimProto, _impl_.simple_sharding_)}},
+    // optional int64 axis = 1;
+    {::_pbi::TcParser::FastV64S1,
+     {8, 0, 0, PROTOBUF_FIELD_OFFSET(ShardedDimProto, _impl_.axis_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // optional int64 axis = 1;
+    {PROTOBUF_FIELD_OFFSET(ShardedDimProto, _impl_.axis_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kInt64)},
+    // repeated .onnx.SimpleShardedDimProto simple_sharding = 2;
+    {PROTOBUF_FIELD_OFFSET(ShardedDimProto, _impl_.simple_sharding_), -1, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::onnx::SimpleShardedDimProto>()},
+  }}, {{
+  }},
+};
+
+PROTOBUF_NOINLINE void ShardedDimProto::Clear() {
+// @@protoc_insertion_point(message_clear_start:onnx.ShardedDimProto)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.simple_sharding_.Clear();
+  _impl_.axis_ = ::int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<std::string>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* ShardedDimProto::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const ShardedDimProto& this_ = static_cast<const ShardedDimProto&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* ShardedDimProto::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const ShardedDimProto& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:onnx.ShardedDimProto)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          cached_has_bits = this_._impl_._has_bits_[0];
+          // optional int64 axis = 1;
+          if (cached_has_bits & 0x00000001u) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt64ToArrayWithField<1>(
+                    stream, this_._internal_axis(), target);
+          }
+
+          // repeated .onnx.SimpleShardedDimProto simple_sharding = 2;
+          for (unsigned i = 0, n = static_cast<unsigned>(
+                                   this_._internal_simple_sharding_size());
+               i < n; i++) {
+            const auto& repfield = this_._internal_simple_sharding().Get(i);
+            target =
+                ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                    2, repfield, repfield.GetCachedSize(),
+                    target, stream);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target = stream->WriteRaw(
+                this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).data(),
+                static_cast<int>(this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size()), target);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:onnx.ShardedDimProto)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t ShardedDimProto::ByteSizeLong(const MessageLite& base) {
+          const ShardedDimProto& this_ = static_cast<const ShardedDimProto&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t ShardedDimProto::ByteSizeLong() const {
+          const ShardedDimProto& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:onnx.ShardedDimProto)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // repeated .onnx.SimpleShardedDimProto simple_sharding = 2;
+            {
+              total_size += 1UL * this_._internal_simple_sharding_size();
+              for (const auto& msg : this_._internal_simple_sharding()) {
+                total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+              }
+            }
+          }
+           {
+            // optional int64 axis = 1;
+            cached_has_bits = this_._impl_._has_bits_[0];
+            if (cached_has_bits & 0x00000001u) {
+              total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+                  this_._internal_axis());
+            }
+          }
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            total_size += this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size();
+          }
+          this_._impl_._cached_size_.Set(::_pbi::ToCachedSize(total_size));
+          return total_size;
+        }
+
+void ShardedDimProto::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<ShardedDimProto*>(&to_msg);
+  auto& from = static_cast<const ShardedDimProto&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:onnx.ShardedDimProto)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_mutable_simple_sharding()->MergeFrom(
+      from._internal_simple_sharding());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _this->_impl_.axis_ = from._impl_.axis_;
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void ShardedDimProto::CopyFrom(const ShardedDimProto& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:onnx.ShardedDimProto)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void ShardedDimProto::InternalSwap(ShardedDimProto* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.simple_sharding_.InternalSwap(&other->_impl_.simple_sharding_);
+        swap(_impl_.axis_, other->_impl_.axis_);
+}
+
+// ===================================================================
+
+class SimpleShardedDimProto::_Internal {
+ public:
+  using HasBits =
+      decltype(std::declval<SimpleShardedDimProto>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(SimpleShardedDimProto, _impl_._has_bits_);
+  static constexpr ::int32_t kOneofCaseOffset =
+      PROTOBUF_FIELD_OFFSET(::onnx::SimpleShardedDimProto, _impl_._oneof_case_);
+};
+
+SimpleShardedDimProto::SimpleShardedDimProto(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:onnx.SimpleShardedDimProto)
+}
+inline PROTOBUF_NDEBUG_INLINE SimpleShardedDimProto::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::onnx::SimpleShardedDimProto& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        dim_{},
+        _oneof_case_{from._oneof_case_[0]} {}
+
+SimpleShardedDimProto::SimpleShardedDimProto(
+    ::google::protobuf::Arena* arena,
+    const SimpleShardedDimProto& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SimpleShardedDimProto* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<std::string>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  _impl_.num_shards_ = from._impl_.num_shards_;
+  switch (dim_case()) {
+    case DIM_NOT_SET:
+      break;
+      case kDimValue:
+        _impl_.dim_.dim_value_ = from._impl_.dim_.dim_value_;
+        break;
+      case kDimParam:
+        new (&_impl_.dim_.dim_param_) decltype(_impl_.dim_.dim_param_){arena, from._impl_.dim_.dim_param_};
+        break;
+  }
+
+  // @@protoc_insertion_point(copy_constructor:onnx.SimpleShardedDimProto)
+}
+inline PROTOBUF_NDEBUG_INLINE SimpleShardedDimProto::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        dim_{},
+        _oneof_case_{} {}
+
+inline void SimpleShardedDimProto::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.num_shards_ = {};
+}
+SimpleShardedDimProto::~SimpleShardedDimProto() {
+  // @@protoc_insertion_point(destructor:onnx.SimpleShardedDimProto)
+  SharedDtor(*this);
+}
+inline void SimpleShardedDimProto::SharedDtor(MessageLite& self) {
+  SimpleShardedDimProto& this_ = static_cast<SimpleShardedDimProto&>(self);
+  this_._internal_metadata_.Delete<std::string>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  if (this_.has_dim()) {
+    this_.clear_dim();
+  }
+  this_._impl_.~Impl_();
+}
+
+void SimpleShardedDimProto::clear_dim() {
+// @@protoc_insertion_point(one_of_clear_start:onnx.SimpleShardedDimProto)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  switch (dim_case()) {
+    case kDimValue: {
+      // No need to clear
+      break;
+    }
+    case kDimParam: {
+      _impl_.dim_.dim_param_.Destroy();
+      break;
+    }
+    case DIM_NOT_SET: {
+      break;
+    }
+  }
+  _impl_._oneof_case_[0] = DIM_NOT_SET;
+}
+
+
+inline void* SimpleShardedDimProto::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) SimpleShardedDimProto(arena);
+}
+constexpr auto SimpleShardedDimProto::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(SimpleShardedDimProto),
+                                            alignof(SimpleShardedDimProto));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataLite<27> SimpleShardedDimProto::_class_data_ = {
+    {
+        &_SimpleShardedDimProto_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &SimpleShardedDimProto::MergeImpl,
+        ::google::protobuf::MessageLite::GetNewImpl<SimpleShardedDimProto>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &SimpleShardedDimProto::SharedDtor,
+        ::google::protobuf::MessageLite::GetClearImpl<SimpleShardedDimProto>(), &SimpleShardedDimProto::ByteSizeLong,
+            &SimpleShardedDimProto::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(SimpleShardedDimProto, _impl_._cached_size_),
+        true,
+    },
+    "onnx.SimpleShardedDimProto",
+};
+const ::google::protobuf::internal::ClassData* SimpleShardedDimProto::GetClassData() const {
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<0, 3, 0, 0, 2> SimpleShardedDimProto::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(SimpleShardedDimProto, _impl_._has_bits_),
+    0, // no _extensions_
+    3, 0,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967288,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    3,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallbackLite,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::onnx::SimpleShardedDimProto>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // optional int64 num_shards = 3;
+    {::_pbi::TcParser::FastV64S1,
+     {24, 0, 0, PROTOBUF_FIELD_OFFSET(SimpleShardedDimProto, _impl_.num_shards_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // int64 dim_value = 1;
+    {PROTOBUF_FIELD_OFFSET(SimpleShardedDimProto, _impl_.dim_.dim_value_), _Internal::kOneofCaseOffset + 0, 0,
+    (0 | ::_fl::kFcOneof | ::_fl::kInt64)},
+    // string dim_param = 2;
+    {PROTOBUF_FIELD_OFFSET(SimpleShardedDimProto, _impl_.dim_.dim_param_), _Internal::kOneofCaseOffset + 0, 0,
+    (0 | ::_fl::kFcOneof | ::_fl::kBytes | ::_fl::kRepAString)},
+    // optional int64 num_shards = 3;
+    {PROTOBUF_FIELD_OFFSET(SimpleShardedDimProto, _impl_.num_shards_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kInt64)},
+  }},
+  // no aux_entries
+  {{
+  }},
+};
+
+PROTOBUF_NOINLINE void SimpleShardedDimProto::Clear() {
+// @@protoc_insertion_point(message_clear_start:onnx.SimpleShardedDimProto)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.num_shards_ = ::int64_t{0};
+  clear_dim();
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<std::string>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* SimpleShardedDimProto::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const SimpleShardedDimProto& this_ = static_cast<const SimpleShardedDimProto&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* SimpleShardedDimProto::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const SimpleShardedDimProto& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:onnx.SimpleShardedDimProto)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          switch (this_.dim_case()) {
+            case kDimValue: {
+              target = ::google::protobuf::internal::WireFormatLite::
+                  WriteInt64ToArrayWithField<1>(
+                      stream, this_._internal_dim_value(), target);
+              break;
+            }
+            case kDimParam: {
+              const std::string& _s = this_._internal_dim_param();
+              target = stream->WriteStringMaybeAliased(2, _s, target);
+              break;
+            }
+            default:
+              break;
+          }
+          cached_has_bits = this_._impl_._has_bits_[0];
+          // optional int64 num_shards = 3;
+          if (cached_has_bits & 0x00000001u) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt64ToArrayWithField<3>(
+                    stream, this_._internal_num_shards(), target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target = stream->WriteRaw(
+                this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).data(),
+                static_cast<int>(this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size()), target);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:onnx.SimpleShardedDimProto)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t SimpleShardedDimProto::ByteSizeLong(const MessageLite& base) {
+          const SimpleShardedDimProto& this_ = static_cast<const SimpleShardedDimProto&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t SimpleShardedDimProto::ByteSizeLong() const {
+          const SimpleShardedDimProto& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:onnx.SimpleShardedDimProto)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+           {
+            // optional int64 num_shards = 3;
+            cached_has_bits = this_._impl_._has_bits_[0];
+            if (cached_has_bits & 0x00000001u) {
+              total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+                  this_._internal_num_shards());
+            }
+          }
+          switch (this_.dim_case()) {
+            // int64 dim_value = 1;
+            case kDimValue: {
+              total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+                  this_._internal_dim_value());
+              break;
+            }
+            // string dim_param = 2;
+            case kDimParam: {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_dim_param());
+              break;
+            }
+            case DIM_NOT_SET: {
+              break;
+            }
+          }
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            total_size += this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size();
+          }
+          this_._impl_._cached_size_.Set(::_pbi::ToCachedSize(total_size));
+          return total_size;
+        }
+
+void SimpleShardedDimProto::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<SimpleShardedDimProto*>(&to_msg);
+  auto& from = static_cast<const SimpleShardedDimProto&>(from_msg);
+  ::google::protobuf::Arena* arena = _this->GetArena();
+  // @@protoc_insertion_point(class_specific_merge_from_start:onnx.SimpleShardedDimProto)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _this->_impl_.num_shards_ = from._impl_.num_shards_;
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (const uint32_t oneof_from_case = from._impl_._oneof_case_[0]) {
+    const uint32_t oneof_to_case = _this->_impl_._oneof_case_[0];
+    const bool oneof_needs_init = oneof_to_case != oneof_from_case;
+    if (oneof_needs_init) {
+      if (oneof_to_case != 0) {
+        _this->clear_dim();
+      }
+      _this->_impl_._oneof_case_[0] = oneof_from_case;
+    }
+
+    switch (oneof_from_case) {
+      case kDimValue: {
+        _this->_impl_.dim_.dim_value_ = from._impl_.dim_.dim_value_;
+        break;
+      }
+      case kDimParam: {
+        if (oneof_needs_init) {
+          _this->_impl_.dim_.dim_param_.InitDefault();
+        }
+        _this->_impl_.dim_.dim_param_.Set(from._internal_dim_param(), arena);
+        break;
+      }
+      case DIM_NOT_SET:
+        break;
+    }
+  }
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void SimpleShardedDimProto::CopyFrom(const SimpleShardedDimProto& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:onnx.SimpleShardedDimProto)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void SimpleShardedDimProto::InternalSwap(SimpleShardedDimProto* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+        swap(_impl_.num_shards_, other->_impl_.num_shards_);
+  swap(_impl_.dim_, other->_impl_.dim_);
+  swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
 // ===================================================================
@@ -3225,6 +4976,7 @@ inline PROTOBUF_NDEBUG_INLINE ModelProto::Impl_::Impl_(
         metadata_props_{visibility, arena, from.metadata_props_},
         training_info_{visibility, arena, from.training_info_},
         functions_{visibility, arena, from.functions_},
+        configuration_{visibility, arena, from.configuration_},
         producer_name_(arena, from.producer_name_),
         producer_version_(arena, from.producer_version_),
         domain_(arena, from.domain_),
@@ -3265,6 +5017,7 @@ inline PROTOBUF_NDEBUG_INLINE ModelProto::Impl_::Impl_(
         metadata_props_{visibility, arena},
         training_info_{visibility, arena},
         functions_{visibility, arena},
+        configuration_{visibility, arena},
         producer_name_(arena),
         producer_version_(arena),
         domain_(arena),
@@ -3317,6 +5070,10 @@ constexpr auto ModelProto::InternalNewImpl_() {
           decltype(ModelProto::_impl_.functions_)::
               InternalGetArenaOffset(
                   ::google::protobuf::MessageLite::internal_visibility()),
+      PROTOBUF_FIELD_OFFSET(ModelProto, _impl_.configuration_) +
+          decltype(ModelProto::_impl_.configuration_)::
+              InternalGetArenaOffset(
+                  ::google::protobuf::MessageLite::internal_visibility()),
   });
   if (arena_bits.has_value()) {
     return ::google::protobuf::internal::MessageCreator::CopyInit(
@@ -3351,16 +5108,16 @@ const ::google::protobuf::internal::ClassData* ModelProto::GetClassData() const 
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<4, 11, 5, 0, 2> ModelProto::_table_ = {
+const ::_pbi::TcParseTable<4, 12, 6, 0, 2> ModelProto::_table_ = {
   {
     PROTOBUF_FIELD_OFFSET(ModelProto, _impl_._has_bits_),
     0, // no _extensions_
-    25, 120,  // max_field_number, fast_idx_mask
+    26, 120,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4277657344,  // skipmap
+    4244102912,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    11,  // num_field_entries
-    5,  // num_aux_entries
+    12,  // num_field_entries
+    6,  // num_aux_entries
     offsetof(decltype(_table_), aux_entries),
     _class_data_.base(),
     nullptr,  // post_loop_handler
@@ -3397,7 +5154,9 @@ const ::_pbi::TcParseTable<4, 11, 5, 0, 2> ModelProto::_table_ = {
     // repeated .onnx.FunctionProto functions = 25;
     {::_pbi::TcParser::FastMtR2,
      {458, 63, 4, PROTOBUF_FIELD_OFFSET(ModelProto, _impl_.functions_)}},
-    {::_pbi::TcParser::MiniParse, {}},
+    // repeated .onnx.DeviceConfigurationProto configuration = 26;
+    {::_pbi::TcParser::FastMtR2,
+     {466, 63, 5, PROTOBUF_FIELD_OFFSET(ModelProto, _impl_.configuration_)}},
     {::_pbi::TcParser::MiniParse, {}},
     {::_pbi::TcParser::MiniParse, {}},
     {::_pbi::TcParser::MiniParse, {}},
@@ -3441,12 +5200,16 @@ const ::_pbi::TcParseTable<4, 11, 5, 0, 2> ModelProto::_table_ = {
     // repeated .onnx.FunctionProto functions = 25;
     {PROTOBUF_FIELD_OFFSET(ModelProto, _impl_.functions_), -1, 4,
     (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+    // repeated .onnx.DeviceConfigurationProto configuration = 26;
+    {PROTOBUF_FIELD_OFFSET(ModelProto, _impl_.configuration_), -1, 5,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
     {::_pbi::TcParser::GetTable<::onnx::GraphProto>()},
     {::_pbi::TcParser::GetTable<::onnx::OperatorSetIdProto>()},
     {::_pbi::TcParser::GetTable<::onnx::StringStringEntryProto>()},
     {::_pbi::TcParser::GetTable<::onnx::TrainingInfoProto>()},
     {::_pbi::TcParser::GetTable<::onnx::FunctionProto>()},
+    {::_pbi::TcParser::GetTable<::onnx::DeviceConfigurationProto>()},
   }}, {{
   }},
 };
@@ -3462,6 +5225,7 @@ PROTOBUF_NOINLINE void ModelProto::Clear() {
   _impl_.metadata_props_.Clear();
   _impl_.training_info_.Clear();
   _impl_.functions_.Clear();
+  _impl_.configuration_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
@@ -3595,6 +5359,17 @@ PROTOBUF_NOINLINE void ModelProto::Clear() {
                     target, stream);
           }
 
+          // repeated .onnx.DeviceConfigurationProto configuration = 26;
+          for (unsigned i = 0, n = static_cast<unsigned>(
+                                   this_._internal_configuration_size());
+               i < n; i++) {
+            const auto& repfield = this_._internal_configuration().Get(i);
+            target =
+                ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                    26, repfield, repfield.GetCachedSize(),
+                    target, stream);
+          }
+
           if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
             target = stream->WriteRaw(
                 this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).data(),
@@ -3645,6 +5420,13 @@ PROTOBUF_NOINLINE void ModelProto::Clear() {
             {
               total_size += 2UL * this_._internal_functions_size();
               for (const auto& msg : this_._internal_functions()) {
+                total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+              }
+            }
+            // repeated .onnx.DeviceConfigurationProto configuration = 26;
+            {
+              total_size += 2UL * this_._internal_configuration_size();
+              for (const auto& msg : this_._internal_configuration()) {
                 total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
               }
             }
@@ -3711,6 +5493,8 @@ void ModelProto::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goog
       from._internal_training_info());
   _this->_internal_mutable_functions()->MergeFrom(
       from._internal_functions());
+  _this->_internal_mutable_configuration()->MergeFrom(
+      from._internal_configuration());
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000007fu) {
     if (cached_has_bits & 0x00000001u) {
@@ -3763,6 +5547,7 @@ void ModelProto::InternalSwap(ModelProto* PROTOBUF_RESTRICT other) {
   _impl_.metadata_props_.InternalSwap(&other->_impl_.metadata_props_);
   _impl_.training_info_.InternalSwap(&other->_impl_.training_info_);
   _impl_.functions_.InternalSwap(&other->_impl_.functions_);
+  _impl_.configuration_.InternalSwap(&other->_impl_.configuration_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.producer_name_, &other->_impl_.producer_name_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.producer_version_, &other->_impl_.producer_version_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.domain_, &other->_impl_.domain_, arena);
@@ -3773,6 +5558,311 @@ void ModelProto::InternalSwap(ModelProto* PROTOBUF_RESTRICT other) {
       - PROTOBUF_FIELD_OFFSET(ModelProto, _impl_.graph_)>(
           reinterpret_cast<char*>(&_impl_.graph_),
           reinterpret_cast<char*>(&other->_impl_.graph_));
+}
+
+// ===================================================================
+
+class DeviceConfigurationProto::_Internal {
+ public:
+  using HasBits =
+      decltype(std::declval<DeviceConfigurationProto>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(DeviceConfigurationProto, _impl_._has_bits_);
+};
+
+DeviceConfigurationProto::DeviceConfigurationProto(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:onnx.DeviceConfigurationProto)
+}
+inline PROTOBUF_NDEBUG_INLINE DeviceConfigurationProto::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::onnx::DeviceConfigurationProto& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        device_{visibility, arena, from.device_},
+        name_(arena, from.name_) {}
+
+DeviceConfigurationProto::DeviceConfigurationProto(
+    ::google::protobuf::Arena* arena,
+    const DeviceConfigurationProto& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::MessageLite(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::MessageLite(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  DeviceConfigurationProto* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<std::string>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  _impl_.num_devices_ = from._impl_.num_devices_;
+
+  // @@protoc_insertion_point(copy_constructor:onnx.DeviceConfigurationProto)
+}
+inline PROTOBUF_NDEBUG_INLINE DeviceConfigurationProto::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        device_{visibility, arena},
+        name_(arena) {}
+
+inline void DeviceConfigurationProto::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.num_devices_ = {};
+}
+DeviceConfigurationProto::~DeviceConfigurationProto() {
+  // @@protoc_insertion_point(destructor:onnx.DeviceConfigurationProto)
+  SharedDtor(*this);
+}
+inline void DeviceConfigurationProto::SharedDtor(MessageLite& self) {
+  DeviceConfigurationProto& this_ = static_cast<DeviceConfigurationProto&>(self);
+  this_._internal_metadata_.Delete<std::string>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.name_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+inline void* DeviceConfigurationProto::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) DeviceConfigurationProto(arena);
+}
+constexpr auto DeviceConfigurationProto::InternalNewImpl_() {
+  constexpr auto arena_bits = ::google::protobuf::internal::EncodePlacementArenaOffsets({
+      PROTOBUF_FIELD_OFFSET(DeviceConfigurationProto, _impl_.device_) +
+          decltype(DeviceConfigurationProto::_impl_.device_)::
+              InternalGetArenaOffset(
+                  ::google::protobuf::MessageLite::internal_visibility()),
+  });
+  if (arena_bits.has_value()) {
+    return ::google::protobuf::internal::MessageCreator::CopyInit(
+        sizeof(DeviceConfigurationProto), alignof(DeviceConfigurationProto), *arena_bits);
+  } else {
+    return ::google::protobuf::internal::MessageCreator(&DeviceConfigurationProto::PlacementNew_,
+                                 sizeof(DeviceConfigurationProto),
+                                 alignof(DeviceConfigurationProto));
+  }
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataLite<30> DeviceConfigurationProto::_class_data_ = {
+    {
+        &_DeviceConfigurationProto_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &DeviceConfigurationProto::MergeImpl,
+        ::google::protobuf::MessageLite::GetNewImpl<DeviceConfigurationProto>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &DeviceConfigurationProto::SharedDtor,
+        ::google::protobuf::MessageLite::GetClearImpl<DeviceConfigurationProto>(), &DeviceConfigurationProto::ByteSizeLong,
+            &DeviceConfigurationProto::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(DeviceConfigurationProto, _impl_._cached_size_),
+        true,
+    },
+    "onnx.DeviceConfigurationProto",
+};
+const ::google::protobuf::internal::ClassData* DeviceConfigurationProto::GetClassData() const {
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 3, 0, 0, 2> DeviceConfigurationProto::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(DeviceConfigurationProto, _impl_._has_bits_),
+    0, // no _extensions_
+    3, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967288,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    3,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallbackLite,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::onnx::DeviceConfigurationProto>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+    // optional string name = 1;
+    {::_pbi::TcParser::FastBS1,
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(DeviceConfigurationProto, _impl_.name_)}},
+    // optional int32 num_devices = 2;
+    {::_pbi::TcParser::FastV32S1,
+     {16, 1, 0, PROTOBUF_FIELD_OFFSET(DeviceConfigurationProto, _impl_.num_devices_)}},
+    // repeated string device = 3;
+    {::_pbi::TcParser::FastBR1,
+     {26, 63, 0, PROTOBUF_FIELD_OFFSET(DeviceConfigurationProto, _impl_.device_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // optional string name = 1;
+    {PROTOBUF_FIELD_OFFSET(DeviceConfigurationProto, _impl_.name_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // optional int32 num_devices = 2;
+    {PROTOBUF_FIELD_OFFSET(DeviceConfigurationProto, _impl_.num_devices_), _Internal::kHasBitsOffset + 1, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kInt32)},
+    // repeated string device = 3;
+    {PROTOBUF_FIELD_OFFSET(DeviceConfigurationProto, _impl_.device_), -1, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kBytes | ::_fl::kRepSString)},
+  }},
+  // no aux_entries
+  {{
+  }},
+};
+
+PROTOBUF_NOINLINE void DeviceConfigurationProto::Clear() {
+// @@protoc_insertion_point(message_clear_start:onnx.DeviceConfigurationProto)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.device_.Clear();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.name_.ClearNonDefaultToEmpty();
+  }
+  _impl_.num_devices_ = 0;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<std::string>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* DeviceConfigurationProto::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const DeviceConfigurationProto& this_ = static_cast<const DeviceConfigurationProto&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* DeviceConfigurationProto::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const DeviceConfigurationProto& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:onnx.DeviceConfigurationProto)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          cached_has_bits = this_._impl_._has_bits_[0];
+          // optional string name = 1;
+          if (cached_has_bits & 0x00000001u) {
+            const std::string& _s = this_._internal_name();
+            target = stream->WriteStringMaybeAliased(1, _s, target);
+          }
+
+          // optional int32 num_devices = 2;
+          if (cached_has_bits & 0x00000002u) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<2>(
+                    stream, this_._internal_num_devices(), target);
+          }
+
+          // repeated string device = 3;
+          for (int i = 0, n = this_._internal_device_size(); i < n; ++i) {
+            const auto& s = this_._internal_device().Get(i);
+            target = stream->WriteString(3, s, target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target = stream->WriteRaw(
+                this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).data(),
+                static_cast<int>(this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size()), target);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:onnx.DeviceConfigurationProto)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t DeviceConfigurationProto::ByteSizeLong(const MessageLite& base) {
+          const DeviceConfigurationProto& this_ = static_cast<const DeviceConfigurationProto&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t DeviceConfigurationProto::ByteSizeLong() const {
+          const DeviceConfigurationProto& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:onnx.DeviceConfigurationProto)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // repeated string device = 3;
+            {
+              total_size +=
+                  1 * ::google::protobuf::internal::FromIntSize(this_._internal_device().size());
+              for (int i = 0, n = this_._internal_device().size(); i < n; ++i) {
+                total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+                    this_._internal_device().Get(i));
+              }
+            }
+          }
+          cached_has_bits = this_._impl_._has_bits_[0];
+          if (cached_has_bits & 0x00000003u) {
+            // optional string name = 1;
+            if (cached_has_bits & 0x00000001u) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_name());
+            }
+            // optional int32 num_devices = 2;
+            if (cached_has_bits & 0x00000002u) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_num_devices());
+            }
+          }
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            total_size += this_._internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size();
+          }
+          this_._impl_._cached_size_.Set(::_pbi::ToCachedSize(total_size));
+          return total_size;
+        }
+
+void DeviceConfigurationProto::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<DeviceConfigurationProto*>(&to_msg);
+  auto& from = static_cast<const DeviceConfigurationProto&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:onnx.DeviceConfigurationProto)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_mutable_device()->MergeFrom(from._internal_device());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_name(from._internal_name());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.num_devices_ = from._impl_.num_devices_;
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void DeviceConfigurationProto::CopyFrom(const DeviceConfigurationProto& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:onnx.DeviceConfigurationProto)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void DeviceConfigurationProto::InternalSwap(DeviceConfigurationProto* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.device_.InternalSwap(&other->_impl_.device_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, &other->_impl_.name_, arena);
+        swap(_impl_.num_devices_, other->_impl_.num_devices_);
 }
 
 // ===================================================================
