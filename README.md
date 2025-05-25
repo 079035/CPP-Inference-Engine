@@ -4,7 +4,7 @@ Required Programs to Run:
 - pkgconf
 - make
 
-### Steps to Run Inference:
+### Commands to Run Inference:
 
 ```
 pip install -r requirements.txt
