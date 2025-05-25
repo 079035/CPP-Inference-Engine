@@ -1,20 +1,22 @@
-CXX = g++
-CXXFLAGS = -std=c++17 -O2 -Isrc
-PROTOBUF_CFLAGS = `pkg-config --cflags protobuf`
-PROTOBUF_LIBS   = `pkg-config --libs protobuf`
-
 SRC_DIR = src
-SRC = $(wildcard $(SRC_DIR)/*.cpp)
-OBJ = $(SRC:.cpp=.o)
-BIN = inference
+SRCS = $(wildcard $(SRC_DIR)/*.cpp) $(wildcard $(SRC_DIR)/*.cc)
+OBJS = $(SRCS:.cpp=.o)
+OBJS := $(OBJS:.cc=.o)   # Also convert .cc to .o
+CXXFLAGS = -std=c++17 -O2 -Isrc `pkg-config --cflags protobuf`
+LDFLAGS = `pkg-config --libs protobuf`
 
-all: $(BIN)
+TARGET = inference_engine
 
-$(BIN): $(OBJ)
-	$(CXX) -o $@ $^ $(PROTOBUF_LIBS)
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(SRC_DIR)/%.o: $(SRC_DIR)/%.cpp
-	$(CXX) $(CXXFLAGS) $(PROTOBUF_CFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.cc
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(SRC_DIR)/*.o $(BIN)
+	rm -f $(SRC_DIR)/*.o $(TARGET)
