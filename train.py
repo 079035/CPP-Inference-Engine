@@ -4,6 +4,7 @@ import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
 import onnx
+import os
 
 
 class MNISTNet(nn.Module):
@@ -71,8 +72,10 @@ def train_mnist_model():
         print(f'Epoch {epoch+1}/{epochs}, Loss: {running_loss:.4f}, Test Accuracy: {accuracy:.2f}%')
     
     dummy_input = torch.randn(1, 1, 28, 28).to(device)
-    torch.onnx.export(model, dummy_input, "mnist_net.onnx")
-    print("Model exported to mnist_net.onnx")
+
+    os.makedirs("model", exist_ok=True)
+    torch.onnx.export(model, dummy_input, "model/mnist_model.onnx")
+    print("Model exported to model/mnist_model.onnx")
 
 
 if __name__ == '__main__':

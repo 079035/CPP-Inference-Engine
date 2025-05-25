@@ -1,1 +1,4 @@
 instructions.pdf
+*.o
+data/*
+model/*
