@@ -68,13 +68,13 @@ python train.py
 **macOS (Apple Silicon):**
 
 ```bash
-brew install protobuf pkg-config
+brew install pkg-config
 ```
 
 **Linux (Ubuntu):**
 
 ```bash
-sudo apt-get install protobuf-compiler libprotobuf-dev pkg-config
+sudo apt-get install pkg-config
 ```
 
 #### 5. **Generate ONNX C++ bindings**
