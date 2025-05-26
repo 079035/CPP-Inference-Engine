@@ -73,7 +73,7 @@ def train_mnist_model():
     
     dummy_input = torch.randn(1, 1, 28, 28).to(device)
 
-    os.makedirs("model", exist_ok=True)
+    os.makedirs("models", exist_ok=True)
     torch.onnx.export(model, dummy_input, "models/mnist_model.onnx")
     print("Model exported to model/mnist_model.onnx")
 
