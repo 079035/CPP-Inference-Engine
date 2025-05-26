@@ -47,16 +47,6 @@ pip install -r requirements.txt
 
 #### 3. **Exporting Your Own Model**
 
-Train a simple MNIST model in Python and export to ONNX (example in `train.py`):
-
-```python
-import torch
-# ...train your model...
-torch.onnx.export(model, dummy_input, "models/mnist_model.onnx", input_names=['onnx::Flatten_0'])
-```
-
-Ensure the input name matches your C++ code.
-
 Train your model:
 
 ```bash
