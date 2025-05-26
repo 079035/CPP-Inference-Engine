@@ -27,7 +27,7 @@ Tensor<float> loadUByteImage(const std::string& path, const std::vector<int64_t>
 
 int main(int argc, char** argv) {
     if (argc != 3) {
-        std::cerr << "Usage: " << argv[0] << " model/mnist_net.onnx inputs/image_0.ubyte\n";
+        std::cerr << "Usage: " << argv[0] << " models/mnist_net.onnx inputs/image_0.ubyte\n";
         return 1;
     }
 
