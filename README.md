@@ -69,6 +69,7 @@ python train.py
 
 ```bash
 brew install protobuf pkg-config
+export PKG_CONFIG_PATH="/opt/homebrew/opt/protobuf/lib/pkgconfig:/opt/homebrew/opt/abseil/lib/pkgconfig:$PKG_CONFIG_PATH"
 ```
 
 **Linux (Ubuntu):**
