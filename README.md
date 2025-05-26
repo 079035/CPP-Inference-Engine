@@ -127,7 +127,7 @@ Predicted class: 7
 You can visualize `.ubyte` images using the provided Python script:
 
 ```bash
-python show_mnist_image.py inputs/image_0.ubyte
+python image_viewer.py inputs/image_0.ubyte
 ```
 
 This opens a window showing the digit image (should be 28x28, grayscale).
