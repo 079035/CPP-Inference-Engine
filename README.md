@@ -1,20 +1,9 @@
-# 🧠 MNIST Inference Engine (C++)
+# MNIST Inference Engine (C++)
 
 A minimal, from-scratch C++ inference engine for running ONNX models—demonstrated on the classic MNIST digit recognition task.
-Inspired by [Build Your Own Inference Engine](https://michalpitr.substack.com/p/build-your-own-inference-engine-from) and [vLLM](https://github.com/vllm-project/vllm).
+Inspired by [Build Your Own Inference Engine](https://michalpitr.substack.com/p/build-your-own-inference-engine-from).
 
----
-
-## ✨ Features
-
-- Loads ONNX models exported from PyTorch, TensorFlow, etc.
-- Supports core ops: **Flatten**, **Gemm**, **ReLU**, **Add** (sufficient for fully-connected MNIST models)
-- Pure C++ with only [protobuf](https://developers.google.com/protocol-buffers) as a dependency.
-- Runs on ARM (Apple Silicon) and x86 Linux/macOS.
-
----
-
-## 📦 Requirements
+## Requirements
 
 Install these before building:
 
@@ -22,53 +11,24 @@ Install these before building:
 - [protobuf](https://developers.google.com/protocol-buffers) (for ONNX parsing)
 - `make`
 - `pkg-config` or `pkgconf`
-- C++17 compiler (`clang++` or `g++`)
-- `protoc` (Protocol Buffers compiler)
-- [Python](https://www.python.org/) (for training/export, image preview)
 
----
+## Quick Start
 
-## ⚡ Quick Start
-
-#### 1. **Clone the repo**
+#### 1. **Set up Python environment (optional, for utilities or training)**
 
 ```bash
-git clone https://github.com/079035/CPP-Inference-Engine.git
-cd CPP-Inference-Engine
+make install
 ```
 
-#### 2. **Set up Python environment (optional, for utilities or training)**
-
-```bash
-conda create --name inference python=3.12
-conda activate inference
-pip install -r requirements.txt
-```
-
-#### 3. **Exporting Your Own Model**
+#### 2. **Exporting Your Own Model**
 
 Train your model:
 
 ```bash
-python train.py
+make trian
 ```
 
-#### 4. **Install Protobuf**
-
-**macOS (Apple Silicon):**
-
-```bash
-brew install protobuf pkg-config
-export PKG_CONFIG_PATH="/opt/homebrew/opt/protobuf/lib/pkgconfig:/opt/homebrew/opt/abseil/lib/pkgconfig:$PKG_CONFIG_PATH"
-```
-
-**Linux (Ubuntu):**
-
-```bash
-sudo apt-get install protobuf-compiler libprotobuf-dev pkg-config
-```
-
-#### 5. **Generate ONNX C++ bindings**
+#### 3. **Generate ONNX C++ bindings**
 
 Download ONNX proto file if not already present:
 
@@ -82,17 +42,15 @@ Generate C++ files:
 protoc --cpp_out=src/ onnx-ml.proto
 ```
 
-You should now have `src/onnx-ml.pb.h` and `src/onnx-ml.pb.cc`.
+You should already or now have `src/onnx-ml.pb.h` and `src/onnx-ml.pb.cc`.
 
-#### 6. **Build the inference engine**
+#### 4. **Build the inference engine**
 
 ```bash
 make clean && make
 ```
 
----
-
-## 🏃‍♂️ Running Inference
+## Running Inference
 
 You need:
 
@@ -100,6 +58,12 @@ You need:
 - A test image in raw ubyte format (see below for details)
 
 **Run:**
+
+```bash
+make run
+```
+
+or manually:
 
 ```bash
 ./inference_engine models/mnist_model.onnx inputs/image_0.ubyte
@@ -111,72 +75,42 @@ You should see output like:
 Predicted class: 7
 ```
 
----
-
-## 🖼️ Previewing Input Images (Optional)
+## Previewing Input Images
 
 You can visualize `.ubyte` images using the provided Python script:
 
 ```bash
-python image_viewer.py inputs/image_0.ubyte
+make show-image
 ```
 
 This opens a window showing the digit image (should be 28x28, grayscale).
 
----
+## Running Benchmark
 
-## 🛠️ Project Structure
-
-```
-src/
-  Graph.h               # Computational graph logic
-  GraphUtils.h          # Topological sort
-  InferenceEngine.h/cpp # Core inference engine
-  main.cpp              # Main entrypoint
-  Node.h                #
-  onnx-ml.pb.h/cc       # Auto-generated from ONNX proto
-  ONNXModelLoader.h     #
-  operators.h/cpp       # Supported ONNX operators
-  Tensor.h              #
-inputs/
-  image_0.ubyte         # Example MNIST image
-  ...
-  image_99.ubyte
-models/
-  mnist_model.onnx      # Trained ONNX model
-image_viewer.py         # Python preview utility
-Makefile
-README.md
-requirements.txt
-train.py                # Python model training script
+```bash
+make run-benchmark
 ```
 
----
+### Baseline Benchmark Results
 
-## 📚 Tips & Troubleshooting
+Results of running 10,000 sequential inference requests.
 
-- **"Missing input tensor" errors:**
-  Make sure the input name in your `main.cpp` matches the model's expected input name (printed at runtime).
+```
+Iteration 1:
+Total inference time: 5894.52 ms
+Average inference time per run: 0.589452 ms
 
-- **Output shape is `(784, 10)` instead of `(1, 10)`:**
-  Ensure your `Flatten` operator reshapes the tensor as `(1, 784)`, not `(784)`.
+Iteration 2:
+Total inference time: 5768.79 ms
+Average inference time per run: 0.576879 ms
 
-- **Linker errors about ONNX/protobuf:**
-  Make sure `onnx-ml.pb.cc` is being compiled and linked, and protobuf headers are found.
+Iteration 3:
+Total inference time: 5908.36 ms
+Average inference time per run: 0.590836 ms
+```
 
-- **Protobuf version issues:**
-  If you see header errors, ensure your `CXXFLAGS` includes the protobuf include directory (use `pkg-config --cflags protobuf`).
+Averaging them, we can run about 1707 inferences per second.
 
----
-
-## 👥 Credits
-
-Inspired by [Michal Pitr's tutorial](https://michalpitr.substack.com/p/build-your-own-inference-engine-from).
-
----
-
-## 📄 License
+## License
 
 MIT License. See [LICENSE](LICENSE) for details.
-
----
