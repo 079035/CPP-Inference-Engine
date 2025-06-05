@@ -25,10 +25,25 @@ make install
 Train your model:
 
 ```bash
-make trian
+make train
 ```
 
-#### 3. **Generate ONNX C++ bindings**
+#### 3. **Install Protobuf**
+
+**macOS (Apple Silicon):**
+
+```bash
+brew install protobuf pkg-config
+export PKG_CONFIG_PATH="/opt/homebrew/opt/protobuf/lib/pkgconfig:/opt/homebrew/opt/abseil/lib/pkgconfig:$PKG_CONFIG_PATH"
+```
+
+**Linux (Ubuntu):**
+
+```bash
+sudo apt-get install protobuf-compiler libprotobuf-dev pkg-config
+```
+
+#### 4. **Generate ONNX C++ bindings**
 
 Download ONNX proto file if not already present:
 
@@ -44,7 +59,7 @@ protoc --cpp_out=src/ onnx-ml.proto
 
 You should already or now have `src/onnx-ml.pb.h` and `src/onnx-ml.pb.cc`.
 
-#### 4. **Build the inference engine**
+#### 5. **Build the inference engine**
 
 ```bash
 make clean && make

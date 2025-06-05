@@ -3,6 +3,7 @@
 #include <vector>
 #include <numeric>
 #include <cassert>
+#include <cstddef>
 
 template<typename T=float>
 struct Tensor {
