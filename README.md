@@ -62,23 +62,18 @@ You should already or now have `src/onnx-ml.pb.h` and `src/onnx-ml.pb.cc`.
 #### 5. **Build the inference engine**
 
 ```bash
-make clean && make
+make
+```
+
+To use CUDA:
+
+```bash
+make USE_CUDA=1
 ```
 
 ## Running Inference
 
-You need:
-
-- An exported ONNX model for MNIST (e.g., `models/mnist_model.onnx`)
-- A test image in raw ubyte format (see below for details)
-
 **Run:**
-
-```bash
-make run
-```
-
-or manually:
 
 ```bash
 ./inference_engine models/mnist_model.onnx inputs/image_0.ubyte
@@ -103,7 +98,19 @@ This opens a window showing the digit image (should be 28x28, grayscale).
 ## Running Benchmark
 
 ```bash
-make run-benchmark
+make benchmark
+```
+
+to use CUDA:
+
+```bash
+make benchmark USE_CUDA=1
+```
+
+Run benchmark:
+
+```bash
+./benchmark models/mnist_model.onnx inputs/
 ```
 
 ### Baseline Benchmark Results

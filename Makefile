@@ -1,55 +1,56 @@
-SRC_DIR = src
-SRCS = $(wildcard $(SRC_DIR)/*.cpp) $(wildcard $(SRC_DIR)/*.cc)
-CU_SRCS = $(wildcard $(SRC_DIR)/*.cu)
+# Compiler
+CXX = g++
+CUDA_PATH = /usr/local/cuda
+
+# Source and object files
+SRCS = $(wildcard src/*.cpp) $(wildcard src/*.cc)
 OBJS = $(SRCS:.cpp=.o)
 OBJS := $(OBJS:.cc=.o)
-CU_OBJS = $(CU_SRCS:.cu=.o)
 
-CUDA_PATH ?= /usr/local/cuda
-CUDA_INCLUDE = -I$(CUDA_PATH)/include
-CUDA_LIB = -L$(CUDA_PATH)/lib64
-
-CXXFLAGS = -std=c++17 -O2 -Isrc -DUSE_CUDA `pkg-config --cflags protobuf`
-NVCCFLAGS = -std=c++17 -O2 -Isrc -DUSE_CUDA
-LDFLAGS = `pkg-config --libs protobuf` -lcudart -lcublas
-
-INPUT_FILE ?= inputs/image_0.ubyte
-
+# Output
 TARGET = inference_engine
 
-SHARED_OBJS = $(filter-out $(SRC_DIR)/main.o, $(OBJS) $(CU_OBJS))
+# Flags
+CXXFLAGS = -std=c++17 -O2 -Isrc `pkg-config --cflags protobuf`
+LDFLAGS = `pkg-config --libs protobuf`
 
-all: $(TARGET) benchmark
+# Add CUDA support if USE_CUDA is defined
+ifdef USE_CUDA
+    CUDA_SRCS = src/operators_cuda.cu
+    CUDA_OBJS = $(CUDA_SRCS:.cu=.o)
+    CXXFLAGS += -DUSE_CUDA -I$(CUDA_PATH)/include
+    LDFLAGS += -L$(CUDA_PATH)/lib64 -lcudart
+endif
 
-$(TARGET): $(OBJS) $(CU_OBJS)
-	$(CXX) -o $@ $^ $(LDFLAGS)
-
-$(SRC_DIR)/%.o: $(SRC_DIR)/%.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(SRC_DIR)/%.o: $(SRC_DIR)/%.cc
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(SRC_DIR)/%.o: $(SRC_DIR)/%.cu
-	nvcc $(NVCCFLAGS) -c $< -o $@
-
-clean:
-	rm -f $(SRC_DIR)/*.o $(TARGET) benchmark benchmark.o
+ALL_OBJS = $(OBJS) $(CUDA_OBJS)
+NVCC = nvcc
 
 install:
 	pip install -r requirements.txt
 
 train:
-	python train.py
+	python3 train.py
 
-run:
-	./inference_engine models/mnist_model.onnx $(INPUT_FILE)
+# Build rules
+all: $(TARGET)
 
-show-image:
-	python image_viewer.py $(INPUT_FILE)
+src/%.o: src/%.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-benchmark: $(SHARED_OBJS) benchmark.o
-	$(CXX) $(CXXFLAGS) $(SHARED_OBJS) benchmark.o -o benchmark $(LDFLAGS)
+src/%.o: src/%.cc
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-run-benchmark:
-	./benchmark models/mnist_model.onnx inputs
+src/%.o: src/%.cu
+	$(NVCC) -c $< -o $@ -std=c++17 -O2 -Isrc -I$(CUDA_PATH)/include -DUSE_CUDA
+
+$(TARGET): $(ALL_OBJS)
+	$(CXX) $(ALL_OBJS) -o $@ $(LDFLAGS)
+
+benchmark.o: benchmark.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+benchmark: benchmark.o $(filter-out src/main.o,$(ALL_OBJS))
+	$(CXX) benchmark.o $(filter-out src/main.o,$(ALL_OBJS)) -o benchmark $(LDFLAGS)
+
+clean:
+	rm -f src/*.o $(TARGET) *.o
