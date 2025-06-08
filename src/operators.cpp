@@ -1,5 +1,8 @@
 // operators.cpp
 #include "operators.h"
+#ifdef USE_CUDA
+#include "operators_cuda.h"
+#endif
 #include <algorithm>
 
 // Flatten
@@ -30,7 +33,17 @@ Tensor<> op_relu(const Tensor<> &in) {
 Tensor<> op_gemm(const Tensor<> &A, const Tensor<> &B,
                   const Tensor<> &bias, bool transA, bool transB,
                   float alpha, float beta) {
-  // assume A:[M×K], B:[K×N], bias:[N]
+#ifdef USE_CUDA
+  if (A.isOnDevice() && B.isOnDevice() && bias.isOnDevice()) {
+    int64_t M = transA ? A.shape[1] : A.shape[0];
+    int64_t N = transB ? B.shape[0] : B.shape[1];
+    Tensor<> C({M, N});
+    C.toDevice();
+    cuda_gemm(A, B, bias, C, transA, transB, alpha, beta);
+    return C;
+  }
+#endif
+  // CPU fallback
   int64_t M = transA ? A.shape[1] : A.shape[0];
   int64_t K = transA ? A.shape[0] : A.shape[1];
   int64_t N = transB ? B.shape[0] : B.shape[1];

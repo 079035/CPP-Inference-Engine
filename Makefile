@@ -1,18 +1,22 @@
 SRC_DIR = src
 SRCS = $(wildcard $(SRC_DIR)/*.cpp) $(wildcard $(SRC_DIR)/*.cc)
+CU_SRCS = $(wildcard $(SRC_DIR)/*.cu)
 OBJS = $(SRCS:.cpp=.o)
-OBJS := $(OBJS:.cc=.o)   # Also convert .cc to .o
-CXXFLAGS = -std=c++17 -O2 -Isrc `pkg-config --cflags protobuf`
-LDFLAGS = `pkg-config --libs protobuf`
+OBJS := $(OBJS:.cc=.o)
+CU_OBJS = $(CU_SRCS:.cu=.o)
+CXXFLAGS = -std=c++17 -O2 -Isrc -DUSE_CUDA `pkg-config --cflags protobuf`
+NVCCFLAGS = -std=c++17 -O2 -Isrc -DUSE_CUDA
+LDFLAGS = `pkg-config --libs protobuf` -lcudart -lcublas
+
 INPUT_FILE ?= inputs/image_0.ubyte
 
 TARGET = inference_engine
 
-SHARED_OBJS = $(filter-out $(SRC_DIR)/main.o, $(OBJS))
+SHARED_OBJS = $(filter-out $(SRC_DIR)/main.o, $(OBJS) $(CU_OBJS))
 
 all: $(TARGET) benchmark
 
-$(TARGET): $(OBJS)
+$(TARGET): $(OBJS) $(CU_OBJS)
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(SRC_DIR)/%.o: $(SRC_DIR)/%.cpp
@@ -20,6 +24,9 @@ $(SRC_DIR)/%.o: $(SRC_DIR)/%.cpp
 
 $(SRC_DIR)/%.o: $(SRC_DIR)/%.cc
 	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.cu
+	nvcc $(NVCCFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(SRC_DIR)/*.o $(TARGET) benchmark benchmark.o
