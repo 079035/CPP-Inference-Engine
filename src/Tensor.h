@@ -3,16 +3,31 @@
 #include <vector>
 #include <numeric>
 #include <cassert>
+#include <cstddef>
+
+#ifdef USE_CUDA
+#include <cuda_runtime.h>
+#endif
+
+// Device type for tensor data
+enum class DeviceType {
+    CPU,
+    CUDA
+};
 
 template<typename T=float>
 struct Tensor {
   std::vector<int64_t> shape;      // e.g. {1, 512, 28, 28}
-  std::vector<T>       data;       // row-major
+  std::vector<T>       data;       // row-major (CPU)
+  void*                device_data = nullptr; // CUDA device pointer
+  DeviceType           device = DeviceType::CPU;
 
   Tensor() = default;
   Tensor(std::vector<int64_t> s)
     : shape(std::move(s)),
       data(std::accumulate(shape.begin(), shape.end(), 1LL, std::multiplies<int64_t>())) {}
+
+  ~Tensor(); // Destructor to free device memory if needed
 
   // Flatten to 1D
   void flatten() {
@@ -36,4 +51,10 @@ struct Tensor {
     assert(idx < data.size());
     return data[idx];
   }
+
+  // CUDA-related methods (interface only)
+  void toDevice();   // Copy data to device (GPU)
+  void toHost();     // Copy data to host (CPU)
+  bool isOnDevice() const { return device == DeviceType::CUDA; }
+  bool isOnHost() const { return device == DeviceType::CPU; }
 };

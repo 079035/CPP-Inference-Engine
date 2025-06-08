@@ -3,3 +3,5 @@ models/*
 inference_engine
 c_cpp_properties.json
 benchmark
+onnx-ml.proto
+src/onnx-ml.*
