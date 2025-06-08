@@ -4,6 +4,11 @@ CU_SRCS = $(wildcard $(SRC_DIR)/*.cu)
 OBJS = $(SRCS:.cpp=.o)
 OBJS := $(OBJS:.cc=.o)
 CU_OBJS = $(CU_SRCS:.cu=.o)
+
+CUDA_PATH ?= /usr/local/cuda
+CUDA_INCLUDE = -I$(CUDA_PATH)/include
+CUDA_LIB = -L$(CUDA_PATH)/lib64
+
 CXXFLAGS = -std=c++17 -O2 -Isrc -DUSE_CUDA `pkg-config --cflags protobuf`
 NVCCFLAGS = -std=c++17 -O2 -Isrc -DUSE_CUDA
 LDFLAGS = `pkg-config --libs protobuf` -lcudart -lcublas
