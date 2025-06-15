@@ -34,15 +34,26 @@ Tensor<> op_gemm(const Tensor<> &A, const Tensor<> &B,
                   const Tensor<> &bias, bool transA, bool transB,
                   float alpha, float beta) {
 #ifdef USE_CUDA
-  if (A.isOnDevice() && B.isOnDevice() && bias.isOnDevice()) {
-    int64_t M = transA ? A.shape[1] : A.shape[0];
-    int64_t N = transB ? B.shape[0] : B.shape[1];
-    Tensor<> C({M, N});
-    C.toDevice();
-    cuda_gemm(A, B, bias, C, transA, transB, alpha, beta);
-    return C;
-  }
-#endif
+  // For CUDA path, make copies of inputs and move them to device
+  Tensor<> A_device = A;
+  Tensor<> B_device = B;
+  Tensor<> bias_device = bias;
+  
+  A_device.toDevice();
+  B_device.toDevice();
+  bias_device.toDevice();
+  
+  int64_t M = transA ? A.shape[1] : A.shape[0];
+  int64_t N = transB ? B.shape[0] : B.shape[1];
+  Tensor<> C({M, N});
+  C.toDevice();
+  
+  cuda_gemm(A_device, B_device, bias_device, C, transA, transB, alpha, beta);
+  
+  // Move result back to host for consistency with CPU path
+  C.toHost();
+  return C;
+#else
   // CPU fallback
   int64_t M = transA ? A.shape[1] : A.shape[0];
   int64_t K = transA ? A.shape[0] : A.shape[1];
@@ -60,4 +71,5 @@ Tensor<> op_gemm(const Tensor<> &A, const Tensor<> &B,
     }
   }
   return C;
+#endif
 }

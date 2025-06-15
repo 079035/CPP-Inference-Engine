@@ -68,7 +68,7 @@ make all
 To use CUDA:
 
 ```bash
-make USE_CUDA=1
+make all USE_CUDA=1
 ```
 
 ## Running Inference
