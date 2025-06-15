@@ -4,6 +4,7 @@
 #include <numeric>
 #include <cassert>
 #include <cstddef>
+#include <cstdint>
 
 #ifdef USE_CUDA
 #include <cuda_runtime.h>

@@ -62,7 +62,7 @@ You should already or now have `src/onnx-ml.pb.h` and `src/onnx-ml.pb.cc`.
 #### 5. **Build the inference engine**
 
 ```bash
-make
+make all
 ```
 
 To use CUDA:
